@@ -1,4 +1,4 @@
-import '../styles/App.css';
+import '../styles/app.css';
 
 const News = ({ news }) => {
   return (

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../styles/App.css';
+import '../styles/app.css';
 
 const Home = ({ news }) => {
   const latestNews = news && news.length > 0 ? news.slice(0, 4) : [];
