@@ -1,4 +1,13 @@
+import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
+
+import './styles/App.css'
+import './assets/fonts/stylesheet.css' 
+
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import News from './pages/News';
+import About from './pages/About';
 
 function App() {
   const [news, setNews] = useState([])
@@ -12,21 +21,15 @@ function App() {
   }, [])
 
   return (
-    <>
-    <div style={{ padding: '20px' }}>
-      <h1>Новости</h1>
-      <div className="news-grid">
-        {news.map((item, index) => (
-          <article key={index} style={{ border: '1px solid #333', margin: '10px 0', padding: '10px' }}>
-            {item.thumbnail && <img src={item.thumbnail} alt={item.title} width="200" />}
-            <h2>{item.title}</h2>
-            <small>{new Date(item.date).toLocaleDateString()}</small>
-            <p>{item.body}</p> 
-          </article>
-        ))}
-      </div>
-    </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home news={news} />} />
+        <Route path="news" element={<News news={news} />} />
+        <Route path="teams" element={<div><h1>Команды</h1><p>Страница команд</p></div>} />
+        <Route path="shop" element={<div><h1>Магазин</h1><p>Страница магазина</p></div>} />
+        <Route path="about" element={<About />} />
+      </Route>
+    </Routes>
   )
 }
 
