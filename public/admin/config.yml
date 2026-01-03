@@ -2,7 +2,7 @@ backend:
   name: github
   repo: xBRANtX/web-vincere-mortem
   branch: main
-  base_url: https://vincere-mortem.pages.dev 
+  base_url: https://vincere-mortem.pages.dev
   auth_endpoint: api/auth
 
 media_folder: "public/images/uploads"
