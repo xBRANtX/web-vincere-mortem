@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: xBRANtX/web-vincere-mortem
+  branch: main
+  base_url: https://vincere-mortem.pages.dev 
+  auth_endpoint: api/auth
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+# Editorial Workflow отключаю (публикация сразу идет в main)
+publish_mode: simple
+
+collections:
+  # --- НОВОСТИ ---
+  - name: "news"
+    label: "Новости"
+    folder: "src/content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "json" 
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Дата публикации", name: "date", widget: "datetime"}
+      - {label: "Обложка", name: "thumbnail", widget: "image", required: false}
+      - {label: "Текст новости", name: "body", widget: "markdown"}
+
+  # --- МАТЧИ ---
+  - name: "matches"
+    label: "Матчи"
+    folder: "src/content/matches"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    format: "json"
+    fields:
+      - {label: "Турнир", name: "tournament", widget: "string"}
+      - {label: "Соперник (Команда)", name: "opponent", widget: "string"}
+      - {label: "Дата и время", name: "date", widget: "datetime"}
+      - {label: "Лого соперника", name: "logo", widget: "image", required: false}
+      - {label: "Счет (если сыграно)", name: "score", widget: "string", required: false}
+      - {label: "Ссылка на стрим", name: "stream", widget: "string", required: false}
