@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
-import './styles/App.css'
+import './styles/app.css'
 import './assets/fonts/stylesheet.css' 
 
 import Layout from './components/Layout';
