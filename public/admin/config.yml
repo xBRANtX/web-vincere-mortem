@@ -18,11 +18,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     format: "json" 
     fields:
-      - {label: "Заголовок", name: "title", widget: "string"}
-      - {label: "Дата публикации", name: "date", widget: "datetime"}
-      - {label: "Обложка", name: "thumbnail", widget: "image", required: false}
-      - {label: "Текст новости", name: "body", widget: "markdown"}
-      - {label: "Категория", name: "category", widget: "string", required: false}
+      - {label: "Заголовок", name: "title", widget: "string", required: true}
+      - {label: "Дата публикации", name: "date", widget: "datetime", required: true}
+      - {label: "Обложка", name: "thumbnail", widget: "image", required: true}
+      - {label: "Текст новости", name: "body", widget: "markdown", required: true}
+      - {label: "Категория", name: "category", widget: "string", required: true}
 
   # --- МАТЧИ ---
   - name: "matches"
@@ -32,12 +32,12 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     format: "json"
     fields:
-      - {label: "Турнир", name: "tournament", widget: "string"}
-      - {label: "Соперник (Команда)", name: "opponent", widget: "string"}
-      - {label: "Дата и время", name: "date", widget: "datetime"}
+      - {label: "Турнир", name: "tournament", widget: "string", required: true}
+      - {label: "Соперник (Команда)", name: "opponent", widget: "string", required: true}
+      - {label: "Дата и время", name: "date", widget: "datetime", required: true}
       - {label: "Лого соперника", name: "logo", widget: "image", required: false}
-      - {label: "Дисциплина", name: "discipline", widget: "string", required: false}
-      - {label: "Счет (если сыграно)", name: "score", widget: "string", required: false}
+      - {label: "Дисциплина", name: "discipline", widget: "string", required: true}
+      - {label: "Счет (если сыграно)", name: "score", widget: "string", required: true}
       - {label: "Ссылка на стрим", name: "stream", widget: "string", required: false}
-      - {label: "Место проведения", name: "venue", widget: "string", required: false}
-      - {label: "Статус", name: "status", widget: "select", options: ["upcoming", "live", "finished"], default: "upcoming", required: false}
+      - {label: "Место проведения", name: "venue", widget: "string", default: "Онлайн", required: true}
+      - {label: "Статус", name: "status", widget: "select", options: ["upcoming", "live", "finished"], default: "upcoming", required: true}

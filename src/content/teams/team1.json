@@ -6,7 +6,7 @@
   "players": [
     {
       "nickname": "Luxus",
-      "name": "P",
+      "name": null,
       "fullName": "Alexander",
       "country": "DE",
       "role": "",
@@ -14,7 +14,7 @@
     },
     {
       "nickname": "Cmetana",
-      "name": "P",
+      "name": null,
       "fullName": "Alexander",
       "country": "DE",
       "role": "",
@@ -22,7 +22,7 @@
     },
     {
       "nickname": "Shoom",
-      "name": "P",
+      "name": null,
       "fullName": "Danil",
       "country": "DE",
       "role": "",
@@ -30,7 +30,7 @@
     },
     {
       "nickname": "Winnie",
-      "name": "P",
+      "name": null,
       "fullName": "Peter",
       "country": "DE",
       "role": "",
