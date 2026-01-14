@@ -73,6 +73,11 @@
     overflow: hidden;
 }
 
+.news-detail-image-wrapper img,
+.news-detail-image {
+    object-position: center 20%;
+}
+
 .news-detail-image-wrapper::after {
     content: '';
     position: absolute;
