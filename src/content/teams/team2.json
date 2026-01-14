@@ -1,0 +1,51 @@
+{
+  "name": "VIM PUBG Mobile G",
+  "discipline": "PUBG MOBILE",
+  "image": "/images/uploads/team1.jpg",
+  "description": "Женский состав по PUBG Mobile.",
+  "players": [
+    {
+      "nickname": "Marusya77",
+      "name": null,
+      "fullName": "name",
+      "country": "RU",
+      "role": "CAP",
+      "avatar": "/images/avatars/g2.png"
+    },
+    {
+      "nickname": "Mulan",
+      "name": null,
+      "fullName": "name",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/g1.png"
+    },
+    {
+      "nickname": "Dyaka",
+      "name": null,
+      "fullName": "name",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/g3.png"
+    },
+    {
+      "nickname": "Vixsy",
+      "name": null,
+      "fullName": "name",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/g4.png"
+    }
+  ],
+  "achievements": [
+    "..."
+  ],
+  "seasonStats": {
+    "Matches": "...",
+    "Wins": "...",
+    "Losses": "...",
+    "Winrate": "...",
+    "Avg Damage": "...",
+    "K/D Ratio": "..."
+  }
+}

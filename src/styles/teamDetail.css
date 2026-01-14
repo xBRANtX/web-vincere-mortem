@@ -203,8 +203,8 @@
 }
 
 .team-player-avatar-large {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   overflow: hidden;
   border: 2px solid #2A2A2A;
@@ -436,8 +436,8 @@
   }
 
   .team-player-avatar-large {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
   }
 
   .team-stats-section {
