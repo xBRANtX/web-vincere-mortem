@@ -3,35 +3,22 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Content Manager</title>
+        <title>CMS - Vincere Mortem</title>
+        <script>
+            if (typeof CMS !== 'undefined') {
+                CMS.registerPreviewStyle('/src/assets/fonts/stylesheet.css');
+                CMS.registerPreviewStyle('/src/styles/global.css');
+                CMS.registerPreviewStyle('/src/styles/layout.css');
+                CMS.registerPreviewStyle('/src/styles/header.css');
+                CMS.registerPreviewStyle('/src/styles/footer.css');
+                CMS.registerPreviewStyle('/src/styles/newsDetail.css');
+                CMS.registerPreviewStyle('/src/styles/news.css');
+                CMS.registerPreviewStyle('/src/styles/teamDetail.css');
+                CMS.registerPreviewStyle('/src/styles/teams.css');
+            }
+        </script>
     </head>
     <body>
         <script src="https://unpkg.com/decap-cms@^3.9.0/dist/decap-cms.js"></script>
-        <script>
-            (function() {
-                if (typeof CMS !== 'undefined') {
-                    registerPreviewStyles();
-                } else {
-                    document.addEventListener('DOMContentLoaded', function() {
-                        if (typeof CMS !== 'undefined') {
-                            registerPreviewStyles();
-                        }
-                    });
-                }
-
-                function registerPreviewStyles() {
-                    CMS.registerPreviewStyle('/src/assets/fonts/stylesheet.css');
-                    CMS.registerPreviewStyle('/src/styles/global.css');
-                    CMS.registerPreviewStyle('/src/styles/layout.css');
-                    CMS.registerPreviewStyle('/src/styles/header.css');
-                    CMS.registerPreviewStyle('/src/styles/footer.css');
-                    CMS.registerPreviewStyle('/src/styles/news.css');
-                    CMS.registerPreviewStyle('/src/styles/newsDetail.css');
-                    CMS.registerPreviewStyle('/src/styles/teams.css');
-                    CMS.registerPreviewStyle('/src/styles/teamDetail.css');
-                    CMS.registerPreviewStyle('/src/styles/matches.css');
-                }
-            })();
-        </script>
     </body>
 </html>
