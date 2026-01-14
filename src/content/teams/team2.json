@@ -10,7 +10,7 @@
       "fullName": "name",
       "country": "RU",
       "role": "CAP",
-      "avatar": "/images/avatars/g2.png"
+      "avatar": "/images/avatars/g2_test.png"
     },
     {
       "nickname": "Mulan",
@@ -18,7 +18,7 @@
       "fullName": "name",
       "country": "DE",
       "role": "",
-      "avatar": "/images/avatars/g1.png"
+      "avatar": "/images/avatars/g1_test.png"
     },
     {
       "nickname": "Dyaka",
@@ -26,7 +26,7 @@
       "fullName": "name",
       "country": "DE",
       "role": "",
-      "avatar": "/images/avatars/g3.png"
+      "avatar": "/images/avatars/g3_test.png"
     },
     {
       "nickname": "Vixsy",
@@ -34,7 +34,7 @@
       "fullName": "name",
       "country": "DE",
       "role": "",
-      "avatar": "/images/avatars/g4.png"
+      "avatar": "/images/avatars/g4_test.png"
     }
   ],
   "achievements": [
