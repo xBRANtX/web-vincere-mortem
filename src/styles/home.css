@@ -1,0 +1,980 @@
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0 20px 0;
+}
+
+.home-title {
+    font-size: 38px;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+    font-family: 'TT Norms Pro', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.all-news-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d0d4da;
+    text-decoration: none;
+    font-family: 'TT Norms Pro', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.all-news-button:hover {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.all-news-button svg {
+    transition: transform 0.2s ease;
+}
+
+.all-news-button:hover svg {
+    transform: translateX(4px);
+}
+
+.home-news {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.featured-news-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-news-link .featured-news {
+    transition: border-color 0.3s;
+}
+.featured-news-link:hover .featured-news {
+    border-color: #dc2626;
+    transition-timing-function: ease;
+}
+.featured-news-link .featured-news {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.featured-news {
+    display: flex;
+    flex-direction: column;
+    background-color: #3D3D3D;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2A2A2A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.featured-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.featured-news-link:hover .featured-image {
+    transform: scale(1.1);
+}
+
+.featured-content-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.news-tag {
+    display: inline-block;
+    background-color: #dc2626;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    align-self: flex-start;
+    margin-bottom: 4px;
+}
+
+.featured-content-overlay h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.featured-content-overlay small {
+    color: #fff;
+    display: block;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    flex: 1;
+    min-width: 0;
+}
+
+.news-grid-three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.news-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #3D3D3D;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2A2A2A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    border-color: #dc2626;
+}
+
+.news-image-wrapper-main {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.news-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image {
+    transform: scale(1.1);
+}
+
+.news-content-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), transparent);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.news-content-overlay .news-tag {
+    margin-bottom: 4px;
+}
+
+.news-content-overlay h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.news-content-overlay small {
+    color: #fff;
+    display: block;
+}
+
+.popular-products-section {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #171717;
+  padding: 60px 0;
+  margin-top: 60px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2A2A2A;
+}
+
+.popular-products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.popular-products-title {
+  font-size: 38px;
+  color: #fff;
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.popular-products-title span {
+  color: #dc2626;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #171717;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  border-color: #dc2626;
+  transform: translateY(-5px);
+}
+
+.product-image-placeholder {
+  width: calc(100% - 40px);
+  height: 300px;
+  margin: 20px;
+  background-color: #2A2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 18px;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+}
+
+.product-price {
+  margin: 0;
+  font-size: 18px;
+  color: #dc2626;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+}
+
+.products-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.products-view-more-button {
+  background-color: transparent;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'TT Norms Pro', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.products-view-more-button:hover {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+.matches-section {
+  width: 100%;
+  margin-top: 60px;
+  padding: 60px 0;
+}
+
+.matches-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.matches-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.matches-title {
+  font-size: 32px;
+  color: #fff;
+  margin: 0 0 30px 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #171717;
+  border-left: 5px solid #171717;
+  transition: border-color 0.3s ease;
+}
+
+.schedule-item:hover {
+  border-color: #dc2626;
+}
+
+.schedule-item:hover .schedule-opponent {
+  color: #dc2626;
+  transition: color 0.3s ease;
+}
+
+.schedule-match-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.schedule-logos {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.schedule-logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #171717;
+  border: 2px solid #2A2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.schedule-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.schedule-vs {
+  font-size: 14px;
+  color: #dc2626;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.schedule-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.schedule-opponent {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+}
+
+
+.schedule-discipline-tournament {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.schedule-datetime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.schedule-date-text {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.schedule-time-text {
+  margin: 0;
+  font-size: 14px;
+  color: #dc2626;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+.next-match-title {
+  font-size: 32px;
+  color: #fff;
+  margin: 0 0 30px 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.next-match-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #2A2A2A;
+  background-image: linear-gradient(135deg, #171717 0%, #000 100%, #dc2626 100%);
+}
+
+.next-match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.next-match-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.next-match-logo-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #171717;
+  border: 2px solid #2A2A2A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.next-match-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.next-match-team-name {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.next-match-vs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 80px;
+}
+
+.next-match-vs-text {
+  font-size: 32px;
+  color: #dc2626;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.next-match-discipline {
+  font-size: 10px;
+  color: #d0d4da;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #262626;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.next-match-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.next-match-tournament {
+  margin: 0;
+  font-size: 16px;
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.next-match-datetime {
+  margin: 0;
+  font-size: 32px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+}
+
+.next-match-venue {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.next-match-stream {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  border: 1px solid #dc2626;
+  color: #dc2626;
+  text-decoration: none;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.next-match-stream:hover {
+  background-color: #b91c1c;
+  color: #fff;
+}
+
+.no-matches {
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.full-schedule-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d0d4da;
+  text-decoration: none;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.full-schedule-button:hover {
+  color: #fff;
+}
+
+.full-schedule-button svg {
+  transition: transform 0.2s ease;
+}
+
+.full-schedule-button:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .home-news {
+    flex-direction: column;
+  }
+  
+  .featured-image-wrapper {
+    height: 620px;
+  }
+  
+  .news-image-wrapper {
+    height: 300px;
+  }
+  
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+  
+  .news-grid-three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .matches-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0 15px;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 40px 0 20px 0;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+
+  .home-news {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .featured-news {
+    flex-direction: column;
+  }
+  
+  .featured-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .featured-image-wrapper .featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+  
+  .news-image-wrapper-main {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .news-image-wrapper-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    display: block;
+  }
+  
+  .news-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .news-grid-three {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .popular-products-section {
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+
+  .popular-products-container {
+    padding: 0 15px;
+  }
+
+  .popular-products-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .product-image-placeholder {
+    height: 250px;
+  }
+
+  .matches-section {
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+
+  .matches-container {
+    padding: 0 15px;
+  }
+
+  .matches-title,
+  .next-match-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .schedule-match-info {
+    width: 100%;
+  }
+
+  .schedule-datetime {
+    margin-left: 0;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .next-match-teams {
+    gap: 20px;
+  }
+
+  .next-match-logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .next-match-vs-text {
+    font-size: 24px;
+  }
+
+  .next-match-team-name {
+    font-size: 14px;
+  }
+
+  .next-match-discipline {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0 10px;
+  }
+
+  .home-header {
+    margin: 30px 0 15px 0;
+  }
+
+  .home-title {
+    font-size: 24px;
+  }
+
+  .featured-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .featured-image-wrapper .featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+
+  .featured-content-overlay {
+    padding: 15px;
+  }
+
+  .featured-content-overlay h2 {
+    font-size: 20px;
+  }
+
+  .news-image-wrapper-main {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .news-image-wrapper-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    display: block;
+  }
+
+  .news-content-overlay h3 {
+    font-size: 16px;
+  }
+
+  .popular-products-title {
+    font-size: 24px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-image-placeholder {
+    height: 320px;
+  }
+
+  .matches-title,
+  .next-match-title {
+    font-size: 20px;
+  }
+  .schedule-match-info {
+    gap: 10px;
+  }
+
+
+  .next-match-logo-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .next-match-vs-text {
+    font-size: 20px;
+  }
+}
+
+.sponsors-section {
+  margin-top: 80px;
+  border-top: 1px solid #2A2A2A;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 40px 0;
+}
+
+.sponsors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sponsors-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.sponsor-item {
+  font-size: 20px;
+  color: #2A2A2A;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .sponsors-section {
+    margin-top: 60px;
+    padding: 20px 0;
+  }
+
+  .sponsors-list {
+    gap: 25px;
+  }
+
+  .sponsor-item {
+    font-size: 8px;
+  }
+}

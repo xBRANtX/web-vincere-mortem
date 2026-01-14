@@ -1,0 +1,51 @@
+{
+  "name": "VIM PUBG Mobile",
+  "discipline": "PUBG MOBILE",
+  "image": "/images/uploads/1200x290.png",
+  "description": "Основной состав по PUBG Mobile.",
+  "players": [
+    {
+      "nickname": "Luxus",
+      "name": "P",
+      "fullName": "Alexander",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/unknown.jpg"
+    },
+    {
+      "nickname": "Cmetana",
+      "name": "P",
+      "fullName": "Alexander",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/unknown.jpg"
+    },
+    {
+      "nickname": "Shoom",
+      "name": "P",
+      "fullName": "Danil",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/unknown.jpg"
+    },
+    {
+      "nickname": "Winnie",
+      "name": "P",
+      "fullName": "Peter",
+      "country": "DE",
+      "role": "",
+      "avatar": "/images/avatars/unknown.jpg"
+    }
+  ],
+  "achievements": [
+    "..."
+  ],
+  "seasonStats": {
+    "Matches": "...",
+    "Wins": "...",
+    "Losses": "...",
+    "Winrate": "...",
+    "Avg Damage": "...",
+    "K/D Ratio": "..."
+  }
+}

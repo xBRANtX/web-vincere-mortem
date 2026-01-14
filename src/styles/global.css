@@ -2,7 +2,38 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #3D3D3D;
+  background-color: #0a0a0a;
   font-family: 'TT Norms Pro', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Touch-friendly improvements */
+button, a, input, textarea, select {
+  -webkit-tap-highlight-color: rgba(220, 38, 38, 0.2);
+}
+
+/* Prevent text size adjustment on iOS */
+@media screen and (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 

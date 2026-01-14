@@ -7,8 +7,6 @@ backend:
 
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
-
-# Editorial Workflow отключаю (публикация сразу идет в main)
 publish_mode: simple
 
 collections:
@@ -24,6 +22,7 @@ collections:
       - {label: "Дата публикации", name: "date", widget: "datetime"}
       - {label: "Обложка", name: "thumbnail", widget: "image", required: false}
       - {label: "Текст новости", name: "body", widget: "markdown"}
+      - {label: "Категория", name: "category", widget: "string", required: false}
 
   # --- МАТЧИ ---
   - name: "matches"
@@ -37,5 +36,8 @@ collections:
       - {label: "Соперник (Команда)", name: "opponent", widget: "string"}
       - {label: "Дата и время", name: "date", widget: "datetime"}
       - {label: "Лого соперника", name: "logo", widget: "image", required: false}
+      - {label: "Дисциплина", name: "discipline", widget: "string", required: false}
       - {label: "Счет (если сыграно)", name: "score", widget: "string", required: false}
       - {label: "Ссылка на стрим", name: "stream", widget: "string", required: false}
+      - {label: "Место проведения", name: "venue", widget: "string", required: false}
+      - {label: "Статус", name: "status", widget: "select", options: ["upcoming", "live", "finished"], default: "upcoming", required: false}

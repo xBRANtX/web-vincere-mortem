@@ -1,0 +1,457 @@
+.team-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: visible;
+}
+
+.team-detail-not-found {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-detail-not-found h1 {
+  font-size: 38px;
+  color: #fff;
+  margin-bottom: 30px;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.team-detail-not-found-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #dc2626;
+  text-decoration: none;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.team-detail-not-found-link:hover {
+  color: #ff4444;
+}
+
+.team-achievements-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-detail-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  overflow: visible;
+}
+
+.team-detail-image-wrapper {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 400px;
+  overflow: hidden;
+}
+
+.team-detail-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, transparent, #0a0a0a);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.team-detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.team-detail-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, #0a0a0a 0%, rgba(10, 10, 10, 0.95) 15%, rgba(10, 10, 10, 0.7) 40%, rgba(10, 10, 10, 0.3) 70%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+
+.team-detail-overlay-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.back-button-team-detail {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0px;
+  color: #d0d4da;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.back-button-team-detail:hover {
+  color: #fff;
+}
+
+.back-button-team-detail svg {
+  transition: transform 0.2s ease;
+}
+
+.back-button-team-detail:hover svg {
+  transform: translateX(-4px);
+}
+
+.team-detail-title {
+  font-size: 48px;
+  color: #fff;
+  margin: 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.team-detail-subtitle {
+  font-size: 20px;
+  color: #dc2626;
+  margin: 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+}
+
+.team-detail-content {
+  padding: 0 0 40px 0;
+}
+
+.team-detail-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.team-detail-left,
+.team-detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.team-detail-section {
+  padding: 20px 0 20px 0;
+}
+.team-detail-section-right {
+  padding: 20px;
+  background-color: #171717;
+  border: 1px solid #2A2A2A;
+}
+
+.team-detail-section-title {
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 15px 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-players-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.team-player-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: #171717;
+  border: 1px solid #2A2A2A;
+}
+
+.team-player-card:hover .team-player-nickname {
+  color: #dc2626;
+}
+
+.team-player-avatar-large {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #2A2A2A;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.player-avatar-img-large {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-avatar-placeholder-large {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #dc2626;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  background-color: #171717;
+}
+
+.team-player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.team-player-nickname {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.team-player-fullname {
+  font-size: 14px;
+  color: #d0d4da;
+  margin: 0;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.team-player-details {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.team-player-country,
+.team-player-role {
+  font-size: 12px;
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 400;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.team-player-country {
+  padding: 4px 0;
+}
+
+.team-player-role {
+  padding: 4px 10px;
+  background-color: #262626;
+}
+
+.team-detail-description {
+  font-size: 15px;
+  color: #d0d4da;
+  line-height: 1.8;
+  margin: 0 0 30px 0;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.team-achievements-section {
+  margin-top: 30px;
+}
+
+.team-achievements-title {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.team-achievements-list-detail {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #d0d4da;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 400;
+  border-left: 2px solid #2A2A2A;
+  padding-left: 10px;
+}
+
+.team-trophy-icon-small {
+  color: #ffd104;
+  flex-shrink: 0;
+}
+
+.team-stats-header {
+  display: flex;
+  gap: 10px;
+}
+
+.team-stats-section {
+  margin-top: 0;
+  padding: 20px 20px 20px 20px;
+  background-color: #1f0d0d;
+  border: 1px solid #451212;
+}
+
+.team-stats-icon {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.team-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.team-stat-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #130808;
+  text-align: center;
+}
+
+.team-stat-label {
+  font-size: 12px;
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+.team-stat-value {
+  font-size: 24px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: bold;
+}
+
+.no-players {
+  color: #999;
+  font-family: 'TT Norms Pro', sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .team-detail-main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .team-detail-image-wrapper {
+    height: 300px;
+  }
+
+  .team-detail-title {
+    font-size: 36px;
+  }
+
+  .team-detail-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-detail-content {
+    padding: 0 15px 30px 15px;
+  }
+
+  .team-detail-image-wrapper {
+    height: 250px;
+  }
+
+  .team-detail-overlay-content {
+    padding: 20px;
+    padding-top: 80px;
+  }
+
+  .team-detail-title {
+    font-size: 28px;
+  }
+
+  .team-detail-subtitle {
+    font-size: 16px;
+  }
+
+  .team-detail-section {
+    padding: 0px;
+  }
+
+  .team-detail-section-title {
+    font-size: 20px;
+  }
+
+  .team-players-list {
+    grid-template-columns: 1fr;
+  }
+
+  .team-player-avatar-large {
+    width: 60px;
+    height: 60px;
+  }
+
+  .team-stats-section {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .team-detail-section {
+    padding: 0px;
+  }
+
+  .team-stats-section {
+    padding: 20px;
+  }
+}
