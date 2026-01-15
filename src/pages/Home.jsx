@@ -240,13 +240,13 @@ const Home = ({ news, matches }) => {
       <div className="sponsors-section">
         <div className="sponsors-container">
           <div className="sponsors-list">
-            <div className="sponsor-item">LOGITECH</div>
-            <div className="sponsor-item">LITENERGY</div>
-            <div className="sponsor-item">LOL</div>
-            <div className="sponsor-item">PUBG</div>
-            <div className="sponsor-item">CS2</div>
-            <div className="sponsor-item">VALORANT</div>
-            <div className="sponsor-item">DOTA 2</div>
+            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">...</div>
           </div>
         </div>
       </div>
