@@ -31,7 +31,7 @@ const TeamDetail = ({ teams }) => {
       {team.image && (
         <div className="team-detail-header">
           <div className="team-detail-image-wrapper">
-            <img src={`${import.meta.env.BASE_URL}/${team.image}`} alt={team.name} className="team-detail-image" />
+            <img src={team.image} alt={team.name} className="team-detail-image" />
             <div className="team-detail-image-overlay">
               <div className="team-detail-overlay-content">
                 <a onClick={
@@ -71,7 +71,7 @@ const TeamDetail = ({ teams }) => {
                       <div key={index} className="team-player-card">
                         <div className="team-player-avatar-large">
                           {playerAvatar ? (
-                            <img src={`${import.meta.env.BASE_URL}/${playerAvatar}`} alt={playerNickname} className="player-avatar-img-large" />
+                            <img src={playerAvatar} alt={playerNickname} className="player-avatar-img-large" />
                           ) : (
                             <div className="player-avatar-placeholder-large">
                               {playerNickname.charAt(0).toUpperCase()}

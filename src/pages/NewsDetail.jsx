@@ -71,7 +71,7 @@ const NewsDetail = ({ news, publicNews, contentNewsMap }) => {
           <div className="news-detail-header">
             <div className="news-detail-image-wrapper">
               <img 
-                src={`${import.meta.env.BASE_URL}/${newsItem.thumbnail}`} 
+                src={newsItem.thumbnail}
                 alt={newsItem.title} 
                 className="news-detail-image" 
               />

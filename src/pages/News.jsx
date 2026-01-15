@@ -94,7 +94,7 @@ const News = ({ news }) => {
                 <article className="news-card">
                   {item.thumbnail && (
                     <div className="news-image-wrapper">
-                      <img src={`${import.meta.env.BASE_URL}/${item.thumbnail}`} alt={item.title} className="news-image" />
+                      <img src={item.thumbnail} alt={item.title} className="news-image" />
                       <div className="news-content-overlay">
                         {item.category && (
                           <span className="news-tag">{item.category}</span>

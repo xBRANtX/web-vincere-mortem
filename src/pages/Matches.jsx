@@ -68,7 +68,7 @@ const Matches = ({ matches }) => {
                   <div className="match-teams">
                     <div className="match-team">
                       <div className="match-logo-circle">
-                        <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Наша команда" className="match-logo" />
+                        <img src="/vim.png" alt="Наша команда" className="match-logo" />
                       </div>
                       <span className="match-team-name">VIM</span>
                     </div>
@@ -81,7 +81,7 @@ const Matches = ({ matches }) => {
                     <div className="match-team">
                       {match.logo && (
                         <div className="match-logo-circle">
-                          <img src={`${import.meta.env.BASE_URL}/${match.logo}`} alt={match.opponent} className="match-logo" />
+                          <img src={match.logo} alt={match.opponent} className="match-logo" />
                         </div>
                       )}
                       <span className="match-team-name">{match.opponent}</span>
@@ -159,7 +159,7 @@ const Matches = ({ matches }) => {
                   <div className="match-teams">
                     <div className="match-team">
                       <div className="match-logo-circle">
-                        <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Наша команда" className="match-logo" />
+                        <img src="/vim.png" alt="Наша команда" className="match-logo" />
                       </div>
                       <span className="match-team-name">VIM</span>
                       {match.score && (
@@ -175,7 +175,7 @@ const Matches = ({ matches }) => {
                     <div className="match-team">
                       {match.logo && (
                         <div className="match-logo-circle">
-                          <img src={`${import.meta.env.BASE_URL}/${match.logo}`} alt={match.opponent} className="match-logo" />
+                          <img src={match.logo} alt={match.opponent} className="match-logo" />
                         </div>
                       )}
                       <span className="match-team-name">{match.opponent}</span>

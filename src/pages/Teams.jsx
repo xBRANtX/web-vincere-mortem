@@ -50,7 +50,7 @@ const Teams = ({ teams }) => {
                         return (
                           <div key={playerIndex} className="team-player-avatar">
                             {playerAvatar ? (
-                              <img src={`${import.meta.env.BASE_URL}/${playerAvatar}`} alt={playerNickname} className="player-avatar-img" />
+                              <img src={playerAvatar} alt={playerNickname} className="player-avatar-img" />
                             ) : (
                               <div className="player-avatar-placeholder">
                                 {playerNickname.charAt(0).toUpperCase()}
