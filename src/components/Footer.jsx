@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-logo">
           <div className="footer-logo-section">
-            <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Логотип" className="logo-img" />
+            <img src="/vim.png" alt="Логотип" className="logo-img" />
             <span className="nav-brand"><span style={{ color: '#dc2626' }}>VINCERE</span><span className="nav-brand-part">MORTEM</span></span>
           </div>
           <p className="footer-logo-text">ZXC</p>

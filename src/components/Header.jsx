@@ -136,7 +136,7 @@ const Header = () => {
             <>
               <div className="nav-logo-section">
                 <Link to="/" className="nav-logo" onClick={scrollToTop}>
-                  <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Логотип" className="logo-img" />
+                  <img src="/vim.png" alt="Логотип" className="logo-img" />
                   <span className="nav-brand"><span style={{ color: '#dc2626' }}>VINCERE</span><span className="nav-brand-part">MORTEM</span></span>
                 </Link>
               </div>
@@ -216,7 +216,7 @@ const Header = () => {
                         onClick={() => handleResultClick(newsItem)}
                       >
                         {newsItem.thumbnail && (
-                          <img src={`${import.meta.env.BASE_URL}/${newsItem.thumbnail}`} alt={newsItem.title} className="search-result-image" />
+                          <img src={newsItem.thumbnail} alt={newsItem.title} className="search-result-image" />
                         )}
                         <div className="search-result-content">
                           <h4 className="search-result-title">{newsItem.title}</h4>
