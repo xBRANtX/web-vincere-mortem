@@ -14,7 +14,7 @@
 ## 📖 Демонстрация Markdown
 
 Для ознакомления с возможностями форматирования Markdown в новостях, посмотрите пример:
-👉 **[Демонстрация возможностей Markdown](https://vincere-mortem.pages.dev/news/content/oodid8)**
+👉 **[Демонстрация возможностей Markdown](https://xbrantx.github.io/web-vincere-mortem/#/news/content/oodid8**
 
 ---
 
@@ -51,7 +51,7 @@
 - Списки: `- элемент` или `1. элемент`
 - Ссылки: `[текст](URL)`
 - Изображения: `![alt](URL)`
-- И другое - см. [демонстрацию](https://vincere-mortem.pages.dev/news/content/oodid8)
+- И другое - см. [демонстрацию](https://xbrantx.github.io/web-vincere-mortem/#/news/content/oodid8)
 
 #### 🎮 Матчи
 
@@ -290,6 +290,6 @@ CMS настроена для работы с GitHub через OAuth.
 
 ## 🔗 Полезные ссылки
 
-- [Демонстрация Markdown](https://vincere-mortem.pages.dev/news/content/oodid8)
-- [Сайт проекта](https://vincere-mortem.pages.dev)
+- [Демонстрация Markdown](https://xbrantx.github.io/web-vincere-mortem/#/news/content/oodid8)
+- [Сайт проекта](https://xbrantx.github.io/web-vincere-mortem/)
 - [Decap CMS документация](https://decapcms.org/docs/)
