@@ -141,6 +141,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="nav-links-section">
+                <Link to="/news" className="nav-link" onClick={scrollToTop}>ГЛАВНАЯ</Link>
                 <Link to="/news" className="nav-link" onClick={scrollToTop}>НОВОСТИ</Link>
                 <Link to="/matches" className="nav-link" onClick={scrollToTop}>МАТЧИ</Link>
                 <Link to="/teams" className="nav-link" onClick={scrollToTop}>КОМАНДЫ</Link>
