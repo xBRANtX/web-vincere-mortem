@@ -141,7 +141,7 @@ const Home = ({ news, matches }) => {
                           <span className="schedule-vs">VS</span>
                           {match.logo && (
                             <div className="schedule-logo-circle">
-                              <img src="{match.logo}" alt={match.opponent} className="schedule-logo" />
+                              <img src={match.logo} alt={match.opponent} className="schedule-logo" />
                             </div>
                           )}
                         </div>
