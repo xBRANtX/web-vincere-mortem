@@ -136,7 +136,7 @@ const Header = () => {
             <>
               <div className="nav-logo-section">
                 <Link to="/" className="nav-logo" onClick={scrollToTop}>
-                  <img src="/vim.png" alt="Логотип" className="logo-img" />
+                  <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Логотип" className="logo-img" />
                   <span className="nav-brand"><span style={{ color: '#dc2626' }}>VINCERE</span><span className="nav-brand-part">MORTEM</span></span>
                 </Link>
               </div>
