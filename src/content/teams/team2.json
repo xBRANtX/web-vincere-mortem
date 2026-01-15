@@ -1,5 +1,5 @@
 {
-  "name": "VIM PUBG Mobile G",
+  "name": "VINCERE MORTEM GIRLS",
   "discipline": "PUBG MOBILE",
   "image": "/images/uploads/team1.jpg",
   "description": "Женский состав по PUBG Mobile.",
@@ -7,45 +7,46 @@
     {
       "nickname": "Marusya77",
       "name": null,
-      "fullName": "name",
+      "fullName": "Mariya",
       "country": "RU",
-      "role": "CAP",
-      "avatar": "/images/avatars/g2_test.png"
+      "role": "PLAYMAKER",
+      "avatar": "/images/avatars/marusya77.png"
     },
     {
       "nickname": "Mulan",
       "name": null,
-      "fullName": "name",
-      "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/g1_test.png"
+      "fullName": "Alena",
+      "country": "RU",
+      "role": "FRAGGER",
+      "avatar": "/images/avatars/mulan.png"
     },
     {
       "nickname": "Dyaka",
       "name": null,
-      "fullName": "name",
-      "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/g3_test.png"
+      "fullName": "Anna",
+      "country": "RU",
+      "role": "CAP",
+      "avatar": "/images/avatars/dyaka.png"
     },
     {
       "nickname": "Vixsy",
       "name": null,
-      "fullName": "name",
-      "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/g4_test.png"
+      "fullName": "Viktoria",
+      "country": "RU",
+      "role": "SUPPORT",
+      "avatar": "/images/avatars/vixsy.png"
     }
   ],
   "achievements": [
-    "..."
+    "PMGLL Group Stage 2026 #3",
+    "PMWEL Finals 2025 #11"
   ],
   "seasonStats": {
-    "Matches": "...",
-    "Wins": "...",
-    "Losses": "...",
-    "Winrate": "...",
-    "Avg Damage": "...",
-    "K/D Ratio": "..."
+    "Matches": "0",
+    "Wins": "0",
+    "Losses": "0",
+    "Winrate": "0",
+    "Avg Damage": "0",
+    "K/D Ratio": "0"
   }
 }

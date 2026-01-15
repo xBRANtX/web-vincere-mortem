@@ -1,5 +1,5 @@
 {
-  "name": "VIM PUBG Mobile",
+  "name": "VINCERE MORTEM",
   "discipline": "PUBG MOBILE",
   "image": "/images/uploads/team1.jpg",
   "description": "Основной состав по PUBG Mobile.",
@@ -9,36 +9,45 @@
       "name": null,
       "fullName": "Alexander",
       "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/unknown.jpg"
+      "role": "FRAGGER",
+      "avatar": "/images/avatars/luxus.png"
     },
     {
       "nickname": "Cmetana",
       "name": null,
       "fullName": "Alexander",
       "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/unknown.jpg"
+      "role": "CAP",
+      "avatar": "/images/avatars/cmetana.png"
     },
     {
       "nickname": "Shoom",
       "name": null,
       "fullName": "Danil",
       "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/unknown.jpg"
+      "role": "FRAGGER",
+      "avatar": "/images/avatars/shoom.png"
     },
     {
       "nickname": "Winnie",
       "name": null,
       "fullName": "Peter",
       "country": "DE",
-      "role": "",
-      "avatar": "/images/avatars/unknown.jpg"
+      "role": "FRAGGER",
+      "avatar": "/images/avatars/winnie.png"
     }
   ],
   "achievements": [
-    "..."
+    "PMSL 2025 Fall #20",
+    "PMES 2025 Fall #2",
+    "PMES 2025 Spring Top 8 #5",
+    "PMSL EU QUAL: Final #5",
+    "PMSL NA QUAL: Final #9",
+    "PMNC 2024 CA Grand Final ",
+    "PMSL EU QUAL: Final #7",
+    "PMNL GSA 2023 Champion #1",
+    "PMCO EU Spring 2023",
+    "PMCO EU Spring 2022 #3"
   ],
   "seasonStats": {
     "Matches": "...",
