@@ -34,7 +34,7 @@ const Teams = ({ teams }) => {
                 <div className="team-card">
                 {team.image && (
                   <div className="team-image-wrapper">
-                    <img src={`${import.meta.env.BASE_URL}/${team.image}`} alt={team.name} className="team-image" />
+                    <img src={team.image} alt={team.name} className="team-image" />
                   </div>
                 )}
                 <div className="team-card-content">
