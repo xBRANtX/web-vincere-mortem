@@ -32,7 +32,7 @@ const About = () => {
           традиционные спортсмены, и мы предоставляем им все условия для достижения вершин. <br /><br />
           VINCERE MORTEM - это семья. Мы поддерживаем наших игроков, создателей контента и фанатов, 
           создавая инклюзивное сообщество, объединенное страстью к играм.</p>
-          <img src="/about.png" alt="about philosophy" className="about-image" />
+          <img src={`${import.meta.env.BASE_URL}/about.png`} alt="about philosophy" className="about-image" />
       </div>
     </>
   );

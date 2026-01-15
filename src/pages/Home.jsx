@@ -40,7 +40,7 @@ const Home = ({ news, matches }) => {
               <article className="featured-news">
                 {featuredNews.thumbnail && (
                   <div className="featured-image-wrapper">
-                    <img src={featuredNews.thumbnail} alt={featuredNews.title} className="featured-image" />
+                    <img src={`${import.meta.env.BASE_URL}/${featuredNews.thumbnail}`} alt={featuredNews.title} className="featured-image" />
                     <div className="featured-content-overlay">
                       {featuredNews.category && (
                         <span className="news-tag">{featuredNews.category}</span>
