@@ -216,7 +216,7 @@ const Header = () => {
                         onClick={() => handleResultClick(newsItem)}
                       >
                         {newsItem.thumbnail && (
-                          <img src={newsItem.thumbnail} alt={newsItem.title} className="search-result-image" />
+                          <img src={`${import.meta.env.BASE_URL}/${newsItem.thumbnail}`} alt={newsItem.title} className="search-result-image" />
                         )}
                         <div className="search-result-content">
                           <h4 className="search-result-title">{newsItem.title}</h4>

@@ -34,7 +34,7 @@ const Teams = ({ teams }) => {
                 <div className="team-card">
                 {team.image && (
                   <div className="team-image-wrapper">
-                    <img src={team.image} alt={team.name} className="team-image" />
+                    <img src={`${import.meta.env.BASE_URL}/${team.image}`} alt={team.name} className="team-image" />
                   </div>
                 )}
                 <div className="team-card-content">
@@ -50,7 +50,7 @@ const Teams = ({ teams }) => {
                         return (
                           <div key={playerIndex} className="team-player-avatar">
                             {playerAvatar ? (
-                              <img src={playerAvatar} alt={playerNickname} className="player-avatar-img" />
+                              <img src={`${import.meta.env.BASE_URL}/${playerAvatar}`} alt={playerNickname} className="player-avatar-img" />
                             ) : (
                               <div className="player-avatar-placeholder">
                                 {playerNickname.charAt(0).toUpperCase()}

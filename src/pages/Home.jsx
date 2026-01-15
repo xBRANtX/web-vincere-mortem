@@ -67,7 +67,7 @@ const Home = ({ news, matches }) => {
                     <article className="news-card">
                       {item.thumbnail && (
                         <div className="news-image-wrapper-main">
-                          <img src={item.thumbnail} alt={item.title} className="news-image" />
+                          <img src={`${import.meta.env.BASE_URL}/${item.thumbnail}`} alt={item.title} className="news-image" />
                           <div className="news-content-overlay">
                             {item.category && (
                               <span className="news-tag">{item.category}</span>
@@ -136,12 +136,12 @@ const Home = ({ news, matches }) => {
                       <div className="schedule-match-info">
                         <div className="schedule-logos">
                           <div className="schedule-logo-circle">
-                            <img src="/vim.png" alt="Наша команда" className="schedule-logo" />
+                            <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Наша команда" className="schedule-logo" />
                           </div>
                           <span className="schedule-vs">VS</span>
                           {match.logo && (
                             <div className="schedule-logo-circle">
-                              <img src={match.logo} alt={match.opponent} className="schedule-logo" />
+                              <img src={`${import.meta.env.BASE_URL}/${match.logo}`} alt={match.opponent} className="schedule-logo" />
                             </div>
                           )}
                         </div>
@@ -188,7 +188,7 @@ const Home = ({ news, matches }) => {
                   <div className="next-match-teams">
                     <div className="next-match-team">
                       <div className="next-match-logo-circle">
-                        <img src="/vim.png" alt="Наша команда" className="next-match-logo" />
+                        <img src={`${import.meta.env.BASE_URL}/vim.png`} alt="Наша команда" className="next-match-logo" />
                       </div>
                       <span className="next-match-team-name">VIM</span>
                     </div>
@@ -201,7 +201,7 @@ const Home = ({ news, matches }) => {
                     <div className="next-match-team">
                       {nextMatch.logo && (
                         <div className="next-match-logo-circle">
-                          <img src={nextMatch.logo} alt={nextMatch.opponent} className="next-match-logo" />
+                          <img src={`${import.meta.env.BASE_URL}/${nextMatch.logo}`} alt={nextMatch.opponent} className="next-match-logo" />
                         </div>
                       )}
                       <span className="next-match-team-name">{nextMatch.opponent}</span>
