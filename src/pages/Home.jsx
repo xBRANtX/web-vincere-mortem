@@ -131,27 +131,39 @@ const Home = ({ news, matches }) => {
               <h2 className="matches-title">РАСПИСАНИЕ <span style={{ color: "#dc2626" }}>МАТЧЕЙ</span></h2>
               {scheduleMatches.length > 0 ? (
                 <div className="schedule-list">
-                  {scheduleMatches.map((match, index) => (
-                    <div key={index} className="schedule-item">
-                      <div className="schedule-match-info">
-                        <div className="schedule-logos">
-                          <div className="schedule-logo-circle">
-                            <img src="/vim.png" alt="Наша команда" className="schedule-logo" />
-                          </div>
-                          <span className="schedule-vs">VS</span>
-                          {match.logo && (
+                  {scheduleMatches.map((match, index) => {
+                    const isPubgMobile = match.discipline === "PUBG MOBILE";
+                    return (
+                      <div key={index} className="schedule-item">
+                        <div className="schedule-match-info">
+                          <div className="schedule-logos">
                             <div className="schedule-logo-circle">
-                              <img src={match.logo} alt={match.opponent} className="schedule-logo" />
+                              <img src="/vim.png" alt="Наша команда" className="schedule-logo" />
                             </div>
-                          )}
+                            {!isPubgMobile && (
+                              <>
+                                <span className="schedule-vs">VS</span>
+                                {match.logo && (
+                                  <div className="schedule-logo-circle">
+                                    <img src={match.logo} alt={match.opponent} className="schedule-logo" />
+                                  </div>
+                                )}
+                              </>
+                            )}
+                          </div>
+                          <div className="schedule-details">
+                            <h3 className="schedule-opponent">{isPubgMobile ? match.tournament : match.opponent}</h3>
+                            <p className="schedule-discipline-tournament">
+                              {match.discipline && (
+                                <>
+                                  {match.discipline}
+                                  {match.ourTeamName && ` • ${match.ourTeamName}`}
+                                  {!isPubgMobile && match.tournament && ` • ${match.tournament}`}
+                                </>
+                              )}
+                            </p>
+                          </div>
                         </div>
-                        <div className="schedule-details">
-                          <h3 className="schedule-opponent">{match.opponent}</h3>
-                          <p className="schedule-discipline-tournament">
-                            {match.discipline && `${match.discipline} • `}{match.tournament}
-                          </p>
-                        </div>
-                      </div>
                       <div className="schedule-datetime">
                         <p className="schedule-date-text">
                           {new Date(match.date).toLocaleDateString('ru-RU', { 
@@ -168,7 +180,8 @@ const Home = ({ news, matches }) => {
                         </p>
                       </div>
                     </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ) : (
                 <p className="no-matches">Матчей пока нет</p>
@@ -183,32 +196,43 @@ const Home = ({ news, matches }) => {
 
             <div className="next-match">
               <h2 className="next-match-title">NEXT <span style={{ color: "#dc2626" }}>MATCH</span></h2>
-              {nextMatch ? (
-                <div className="next-match-card">
-                  <div className="next-match-teams">
-                    <div className="next-match-team">
-                      <div className="next-match-logo-circle">
-                        <img src="/vim.png" alt="Наша команда" className="next-match-logo" />
-                      </div>
-                      <span className="next-match-team-name">VIM</span>
-                    </div>
-                    <div className="next-match-vs">
-                      <span className="next-match-vs-text">VS</span>
-                      {nextMatch.discipline && (
-                        <span className="next-match-discipline">{nextMatch.discipline}</span>
-                      )}
-                    </div>
-                    <div className="next-match-team">
-                      {nextMatch.logo && (
+              {nextMatch ? (() => {
+                const isPubgMobile = nextMatch.discipline === "PUBG MOBILE";
+                return (
+                  <div className="next-match-card">
+                    <div className={`next-match-teams ${isPubgMobile ? 'next-match-teams-vertical' : ''}`}>
+                      <div className="next-match-team">
                         <div className="next-match-logo-circle">
-                          <img src={nextMatch.logo} alt={nextMatch.opponent} className="next-match-logo" />
+                          <img src="/vim.png" alt="Наша команда" className="next-match-logo" />
+                        </div>
+                        <span className="next-match-team-name">{nextMatch.ourTeamName}</span>
+                      </div>
+                      {!isPubgMobile && (
+                        <div className="next-match-vs">
+                          <span className="next-match-vs-text">VS</span>
+                          {nextMatch.discipline && (
+                            <span className="next-match-discipline">{nextMatch.discipline}</span>
+                          )}
                         </div>
                       )}
-                      <span className="next-match-team-name">{nextMatch.opponent}</span>
+                      {isPubgMobile && nextMatch.discipline && (
+                        <div className="next-match-vs">
+                          <span className="next-match-discipline">{nextMatch.discipline}</span>
+                        </div>
+                      )}
+                      <div className="next-match-team">
+                        {!isPubgMobile && nextMatch.logo && (
+                          <div className="next-match-logo-circle">
+                            <img src={nextMatch.logo} alt={nextMatch.opponent} className="next-match-logo" />
+                          </div>
+                        )}
+                        <span className={isPubgMobile ? "next-match-tournament" : "next-match-team-name"}>{isPubgMobile ? nextMatch.tournament : nextMatch.opponent}</span>
+                      </div>
                     </div>
-                  </div>
-                  <div className="next-match-content">
-                    <p className="next-match-tournament">{nextMatch.tournament}</p>
+                    <div className="next-match-content">
+                      {!isPubgMobile && (
+                        <p className="next-match-tournament">{nextMatch.tournament}</p>
+                      )}
                     <p className="next-match-datetime">
                       {new Date(nextMatch.date).toLocaleDateString('ru-RU', { 
                         day: '2-digit',
@@ -227,9 +251,10 @@ const Home = ({ news, matches }) => {
                         Смотреть трансляцию
                       </a>
                     )}
+                    </div>
                   </div>
-                </div>
-              ) : (
+                );
+              })() : (
                 <p className="no-matches">Следующих матчей нет</p>
               )}
             </div>
@@ -240,13 +265,7 @@ const Home = ({ news, matches }) => {
       <div className="sponsors-section">
         <div className="sponsors-container">
           <div className="sponsors-list">
-            <div className="sponsor-item">...</div>
-            <div className="sponsor-item">...</div>
-            <div className="sponsor-item">...</div>
-            <div className="sponsor-item">...</div>
-            <div className="sponsor-item">...</div>
-            <div className="sponsor-item">...</div>
-            <div className="sponsor-item">...</div>
+            <div className="sponsor-item">LITENERGY</div>
           </div>
         </div>
       </div>

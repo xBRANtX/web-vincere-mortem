@@ -151,10 +151,6 @@
     min-width: 0;
 }
 
-.news-grid-three {
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .news-card {
     display: flex;
     flex-direction: column;
@@ -401,8 +397,8 @@
 }
 
 .schedule-logo-circle {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #171717;
   border: 2px solid #2A2A2A;
@@ -442,6 +438,7 @@
   color: #fff;
   font-family: 'TT Norms Pro', sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 
@@ -508,6 +505,12 @@
   margin-bottom: 30px;
 }
 
+.next-match-teams-vertical {
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
 .next-match-team {
   display: flex;
   flex-direction: column;
@@ -517,8 +520,8 @@
 }
 
 .next-match-logo-circle {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-color: #171717;
   border: 2px solid #2A2A2A;
@@ -561,14 +564,14 @@
 }
 
 .next-match-discipline {
-  font-size: 10px;
+  font-size: 12px;
   color: #d0d4da;
   font-family: 'TT Norms Pro', sans-serif;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   background-color: #262626;
-  padding: 5px;
+  padding: 8px;
   border-radius: 4px;
 }
 
@@ -672,10 +675,6 @@
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
-  
-  .news-grid-three {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -750,15 +749,8 @@
   }
   
   .news-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-  }
-  
-  .news-grid-three {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 
   .popular-products-section {

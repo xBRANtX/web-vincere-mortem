@@ -33,7 +33,8 @@ collections:
     format: "json"
     fields:
       - {label: "Турнир", name: "tournament", widget: "string", required: true}
-      - {label: "Соперник (Команда)", name: "opponent", widget: "string", required: true}
+      - {label: "Название нашей команды", name: "ourTeamName", widget: "string", default: "VIM", required: true}
+      - {label: "Название команды соперника", name: "opponent", widget: "string", required: true}
       - {label: "Дата и время", name: "date", widget: "datetime", required: true}
       - {label: "Лого соперника", name: "logo", widget: "image", required: false}
       - {label: "Дисциплина", name: "discipline", widget: "string", required: true}

@@ -28,13 +28,14 @@ const Footer = () => {
         <div className="footer-partners">
           <h3 className="footer-partners-title">ПАРТНЁРЫ</h3>
           <ul className="footer-partners-list">
-            <li><a href="" className="footer-partners-link">LITENERGY</a></li>
+            <li><a href="" className="footer-partners-link">...</a></li>
           </ul>
         </div>
         <div className="footer-social">
           <h3 className="footer-social-title">СОЦСЕТИ</h3>
           <ul className="footer-social-list">
             <li><a href="https://t.me/vim_pubgm" className="footer-social-link">Telegram</a></li>
+            <li><a href="https://discord.gg/wJwwqXsfsx" className="footer-social-link">Discord</a></li>
           </ul>
         </div>
       </div>
