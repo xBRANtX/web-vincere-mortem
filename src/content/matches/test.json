@@ -1,12 +1,12 @@
 {
-  "tournament": "Cyber Championship 2026",
-  "opponent": "...",
-  "ourTeamName": "VINCERE MORTEM",
-  "date": "2026-01-01T18:00:00",
+  "stream": "https://www.youtube.com/watch?v=rrmuquDHJsE",
+  "tournament": "PMGLL 2nd Day",
   "logo": "/images/uploads/unknown.jpg",
-  "discipline": "PUBG MOBILE",
-  "score": null,
-  "stream": "https://twitch.tv/example",
+  "date": "2026-01-14T21:00:00.000+03:00",
   "venue": "Онлайн",
-  "status": "upcoming"
+  "discipline": "PUBG MOBILE",
+  "score": "1",
+  "status": "finished",
+  "ourTeamName": "VINCERE MORTEM",
+  "opponent": "..."
 }
