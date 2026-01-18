@@ -6,8 +6,8 @@ import rehypeRaw from 'rehype-raw';
 import '../styles/newsDetail.css';
 import { scrollToTop } from '../utils/scrollToTop';
 
-const NewsDetail = ({ news, publicNews, contentNewsMap }) => {
-  const { id, slug } = useParams();
+const NewsDetail = ({ news, publicNews, newsSlugMap }) => {
+  const { slug } = useParams();
   const navigate = useNavigate();
   const [showNotification, setShowNotification] = useState(false);
   
@@ -35,13 +35,8 @@ const NewsDetail = ({ news, publicNews, contentNewsMap }) => {
     window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
   };
   
-  if (slug && contentNewsMap) {
-    newsItem = contentNewsMap[slug] || null;
-  } else if (id !== undefined && publicNews && !isNaN(parseInt(id))) {
-    const newsIndex = parseInt(id);
-    newsItem = publicNews && publicNews.length > 0 && newsIndex >= 0 && newsIndex < publicNews.length 
-      ? publicNews[newsIndex] 
-      : null;
+  if (slug && newsSlugMap) {
+    newsItem = newsSlugMap[slug] || null;
   }
 
   if (!newsItem) {

@@ -22,23 +22,63 @@ collections:
       - {label: "Дата публикации", name: "date", widget: "datetime", required: true}
       - {label: "Обложка", name: "thumbnail", widget: "image", required: true}
       - {label: "Текст новости", name: "body", widget: "markdown", required: true}
-      - {label: "Категория", name: "category", widget: "string", required: true}
+      - {label: "Категория", name: "category", widget: "select", options: ["ANNOUNCMENT", "PUBG MOBILE", "PUBG MOBILE GIRLS", "PUBG TOURNAMENTS"], required: true}
 
   # --- МАТЧИ ---
   - name: "matches"
     label: "Матчи"
     folder: "src/content/matches"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}"
     format: "json"
     fields:
       - {label: "Турнир", name: "tournament", widget: "string", required: true}
-      - {label: "Название нашей команды", name: "ourTeamName", widget: "string", default: "VIM", required: true}
+      - {label: "Название нашей команды", name: "ourTeamName", widget: "string", default: "VINCERE MORTEM", required: true}
+      - {label: "Лого нашей команды", name: "ourTeamLogo", widget: "image", default: "images/uploads/vim_default.png", required: false}
       - {label: "Название команды соперника", name: "opponent", widget: "string", required: true}
-      - {label: "Дата и время", name: "date", widget: "datetime", required: true}
       - {label: "Лого соперника", name: "logo", widget: "image", required: false}
+      - {label: "Дата и время", name: "date", widget: "datetime", required: true}
       - {label: "Дисциплина", name: "discipline", widget: "string", required: true}
-      - {label: "Счет (если сыграно)", name: "score", widget: "string", required: true}
+      - {label: "ТОП (число) или СЧЕТ (число:число) если сыграно", name: "score", widget: "string", required: false}
       - {label: "Ссылка на стрим", name: "stream", widget: "string", required: false}
       - {label: "Место проведения", name: "venue", widget: "string", default: "Онлайн", required: true}
-      - {label: "Статус", name: "status", widget: "select", options: ["upcoming", "live", "finished"], default: "upcoming", required: true}
+      - {label: "Статус", name: "status", widget: "select", options: ["upcoming", "finished"], default: "upcoming", required: true}
+
+  # --- КОМАНДЫ ---
+  - name: "teams"
+    label: "Команды"
+    folder: "src/content/teams"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}"
+    format: "json"
+    fields:
+      - {label: "Название команды", name: "name", widget: "string", required: true}
+      - {label: "Дисциплина", name: "discipline", widget: "string", required: true}
+      - {label: "Фоновое изображение", name: "image", widget: "image", required: true}
+      - {label: "Описание", name: "description", widget: "text", required: true}
+
+      - label: "Игроки"
+        name: "players"
+        widget: "list"
+        fields:
+          - {label: "Никнейм", name: "nickname", widget: "string", required: true}
+          - {label: "Полное имя", name: "fullName", widget: "string", required: true}
+          - {label: "Страна (код)", name: "country", widget: "string", required: true, hint: "Например: RU, DE, US"}
+          - {label: "Роль", name: "role", widget: "select", options: ["CAP", "FRAGGER", "SUPPORT", "PLAYMAKER", "SNIPER"], required: true}
+          - {label: "Аватар", name: "avatar", widget: "image", required: true}
+      
+      - label: "Достижения"
+        name: "achievements"
+        widget: "list"
+        field: {label: "Достижение", name: "achievement", widget: "string"}
+      
+      - label: "Сезонная статистика"
+        name: "seasonStats"
+        widget: "object"
+        fields:
+          - {label: "Матчи", name: "Matches", widget: "string", required: true}
+          - {label: "Победы", name: "Wins", widget: "string", required: true}
+          - {label: "Поражения", name: "Losses", widget: "string", required: true}
+          - {label: "Процент побед", name: "Winrate", widget: "string", required: true}
+          - {label: "Средний урон", name: "Avg Damage", widget: "string", required: true}
+          - {label: "K/D Ratio", name: "K/D Ratio", widget: "string", required: true}

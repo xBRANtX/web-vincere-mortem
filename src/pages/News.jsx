@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/news.css';
 import { scrollToTop } from '../utils/scrollToTop';
 
-const News = ({ news }) => {
+const News = ({ news, newsSlugMap }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const newsPerPage = 12;
@@ -84,11 +84,12 @@ const News = ({ news }) => {
       <div className="news-grid news-grid-three">
         {paginatedNews && paginatedNews.length > 0 ? (
           paginatedNews.map((item, index) => {
-            const realIndex = news ? news.findIndex(n => n === item) : startIndex + index;
+            const slug = Object.keys(newsSlugMap).find(key => newsSlugMap[key] === item);
+            
             return (
               <Link 
-                key={realIndex} 
-                to={`/news/${realIndex}`}
+                key={slug || index} 
+                to={`/news/${slug}`}
                 className="news-card-link"
               >
                 <article className="news-card">

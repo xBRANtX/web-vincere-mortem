@@ -11,13 +11,13 @@ import About from './pages/About';
 import Matches from './pages/Matches';
 import Teams from './pages/Teams';
 import TeamDetail from './pages/TeamDetail';
-import { createContentNewsMap } from './utils/newsSlug';
+import { createNewsSlugMap } from './utils/newsSlug';
 import { NewsProvider } from './contexts/NewsContext';
 
 function App() {
   const [news, setNews] = useState([])
   const [publicNews, setPublicNews] = useState([])
-  const [contentNewsMap, setContentNewsMap] = useState({})
+  const [newsSlugMap, setNewsSlugMap] = useState({})
   const [matches, setMatches] = useState([])
   const [teams, setTeams] = useState([])
 
@@ -34,19 +34,19 @@ function App() {
     publishedNews.sort((a, b) => new Date(b.date) - new Date(a.date))
     
     const publicNewsArray = publishedNews.filter(item => item.category !== 'CONTENT')
-    const contentMap = createContentNewsMap(modules)
+    const allNewsMap = createNewsSlugMap(modules)
     
-    const publishedContentMap = {}
-    Object.entries(contentMap).forEach(([slug, newsItem]) => {
+    const publishedNewsMap = {}
+    Object.entries(allNewsMap).forEach(([slug, newsItem]) => {
       const newsDate = new Date(newsItem.date)
       if (newsDate <= currentDate) {
-        publishedContentMap[slug] = newsItem
+        publishedNewsMap[slug] = newsItem
       }
     })
     
     setNews(publishedNews)
     setPublicNews(publicNewsArray)
-    setContentNewsMap(publishedContentMap)
+    setNewsSlugMap(publishedNewsMap)
   }, [])
 
   useEffect(() => {
@@ -68,10 +68,9 @@ function App() {
     <NewsProvider publicNews={publicNews}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home news={publicNews} matches={matches} />} />
-          <Route path="news" element={<News news={publicNews} />} />
-          <Route path="news/content/:slug" element={<NewsDetail news={news} publicNews={publicNews} contentNewsMap={contentNewsMap} />} />
-          <Route path="news/:id" element={<NewsDetail news={news} publicNews={publicNews} contentNewsMap={contentNewsMap} />} />
+          <Route index element={<Home news={publicNews} matches={matches} newsSlugMap={newsSlugMap} />} />
+          <Route path="news" element={<News news={publicNews} newsSlugMap={newsSlugMap} />} />
+          <Route path="news/:slug" element={<NewsDetail news={news} publicNews={publicNews} newsSlugMap={newsSlugMap} />} />
           <Route path="matches" element={<Matches matches={matches} />} />
           <Route path="teams" element={<Teams teams={teams} />} />
           <Route path="teams/:id" element={<TeamDetail teams={teams} />} />

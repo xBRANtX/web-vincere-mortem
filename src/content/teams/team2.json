@@ -6,35 +6,31 @@
   "players": [
     {
       "nickname": "Marusya77",
-      "name": null,
       "fullName": "Mariya",
       "country": "RU",
       "role": "PLAYMAKER",
-      "avatar": "/images/avatars/marusya77.png"
+      "avatar": "/images/uploads/marusya77.png"
     },
     {
       "nickname": "Mulan",
-      "name": null,
       "fullName": "Alena",
       "country": "RU",
       "role": "FRAGGER",
-      "avatar": "/images/avatars/mulan.png"
+      "avatar": "/images/uploads/mulan.png"
     },
     {
       "nickname": "Dyaka",
-      "name": null,
       "fullName": "Anna",
       "country": "RU",
       "role": "CAP",
-      "avatar": "/images/avatars/dyaka.png"
+      "avatar": "/images/uploads/dyaka.png"
     },
     {
       "nickname": "Vixsy",
-      "name": null,
       "fullName": "Viktoria",
       "country": "RU",
       "role": "SUPPORT",
-      "avatar": "/images/avatars/vixsy.png"
+      "avatar": "/images/uploads/vixsy.png"
     }
   ],
   "achievements": [

@@ -39,7 +39,7 @@
 
 .match-card {
   border: 1px solid #2A2A2A;
-  background-image: linear-gradient(135deg, #171717 0%, #000 100%, #dc2626 100%);
+  background: linear-gradient(90deg, #000 0%, #171717 70%, #dc2626 100%);
 }
 
 .match-card-played {
@@ -47,15 +47,19 @@
 }
 
 .match-card-content {
-  padding: 15px 20px;
-}
-
-.match-teams {
+  padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
-  width: 100%;
+}
+
+.match-teams-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  flex-shrink: 0;
 }
 
 .match-team {
@@ -63,12 +67,12 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  flex: 1;
+  flex: 0 0 auto;
 }
 
 .match-logo-circle {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: #171717;
   border: 2px solid #2A2A2A;
@@ -83,15 +87,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.match-team-name {
-  font-size: 14px;
-  color: #fff;
-  font-family: 'TT Norms Pro', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .match-score {
@@ -119,36 +114,46 @@
 }
 
 .match-discipline {
-  font-size: 10px;
+  font-size: 12px;
   color: #d0d4da;
   font-family: 'TT Norms Pro', sans-serif;
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
   background-color: #262626;
-  padding: 5px;
+  padding: 6px;
   border-radius: 4px;
 }
 
-.match-info {
+.match-info-center {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  width: 100%;
+  gap: 8px;
+  width: 600px;
+  flex-shrink: 1;
   align-items: center;
   text-align: center;
+  justify-content: center;
+}
+
+.match-action-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  flex-shrink: 0;
 }
 
 .match-tournament {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   color: #999;
   font-family: 'TT Norms Pro', sans-serif;
 }
 
 .match-datetime {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   font-family: 'TT Norms Pro', sans-serif;
   font-weight: 600;
@@ -156,9 +161,62 @@
 
 .match-venue {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
   color: #999;
   font-family: 'TT Norms Pro', sans-serif;
+}
+
+.match-watch-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: 'TT Norms Pro', sans-serif;
+}
+
+.match-watch-text {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.match-watch-button svg {
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.match-watch-button:hover svg {
+  transform: translateX(3px);
+}
+
+.match-placement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+}
+
+.match-placement-text {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Счет для обычных матчей */
+.match-score-result {
+  font-size: 18px;
+  color: #fff;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .no-matches-message {
@@ -243,8 +301,27 @@
     margin: 40px 0 30px 0;
   }
 
-  .match-teams {
-    gap: 15px;
+  .match-card-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .match-card {
+    background: linear-gradient(180deg, #000 0%, #171717 100%);
+  }
+
+  .match-teams-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .match-info-center {
+    width: 100%;
+  }
+
+  .match-action-right {
+    width: 100%;
   }
 
   .match-logo-circle {
@@ -272,18 +349,27 @@
   }
 
   .match-card-content {
-    padding: 12px 15px;
+    padding: 15px 12px;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .match-teams {
+  .match-teams-left {
+    width: 100%;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 12px;
+    justify-content: center;
+  }
+
+  .match-info-center {
+    width: 100%;
+  }
+
+  .match-action-right {
+    width: 100%;
   }
 
   .match-team {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 100px;
     gap: 6px;
   }
 
@@ -293,13 +379,7 @@
     padding: 4px;
   }
 
-  .match-team-name {
-    font-size: 12px;
-  }
-
   .match-vs {
-    width: 100%;
-    justify-content: center;
     min-width: auto;
     gap: 4px;
   }
@@ -313,11 +393,27 @@
   }
 
   .match-tournament {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .match-venue {
-    font-size: 11px;
+    font-size: 14px;
+  }
+
+  .match-watch-button {
+    padding: 10px 25px;
+  }
+
+  .match-watch-text {
+    font-size: 12px;
+  }
+
+  .match-placement-text {
+    font-size: 16px;
+  }
+
+  .match-score-result {
+    font-size: 20px;
   }
 
   .pagination {
@@ -344,5 +440,5 @@
   .matches-section-upcoming,
   .matches-section-played {
     margin-bottom: 20px;
-}
+  }
 }

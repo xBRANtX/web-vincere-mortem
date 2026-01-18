@@ -1,26 +1,38 @@
-// Утилита для работы со slug новостей категории CONTENT
+// Утилита для работы со slug новостей
 
 /**
  * Генерирует slug на основе названия файла
- * @param {string} filename - Название файла (например, "2026-01-12-новость.json")
- * @returns {string} - Slug (например, "a1b2c3d4")
+ * @param {string} filename - Название файла (например, "2026-01-12-news.json")
+ * @returns {string} - Slug (например, "2026-01-12-news")
  */
 export function generateSlugFromFilename(filename) {
   const nameWithoutExt = filename.replace(/\.json$/, '');
-  
-  let hash = 0;
-  for (let i = 0; i < nameWithoutExt.length; i++) {
-    const char = nameWithoutExt.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
-  }
-  
-  const positiveHash = Math.abs(hash);
-  return positiveHash.toString(36).substring(0, 8);
+  return nameWithoutExt;
 }
 
 /**
- * Создание маппинга slug -> новость для новостей категории CONTENT
+ * Создание маппинга slug -> новость для всех новостей
+ * @param {Object} modules - Объект с модулями файлов
+ * @returns {Object} - Объект с маппингом { slug: newsItem }
+ */
+export function createNewsSlugMap(modules) {
+  const slugMap = {};
+  
+  Object.entries(modules).forEach(([modulePath, module]) => {
+    const newsItem = module?.default;
+    
+    if (newsItem) {
+      const filename = modulePath.split('/').pop();
+      const slug = generateSlugFromFilename(filename);
+      slugMap[slug] = newsItem;
+    }
+  });
+  
+  return slugMap;
+}
+
+/**
+ * Создание маппинга slug -> новость для новостей категории CONTENT (для обратной совместимости)
  * @param {Object} modules - Объект с модулями файлов
  * @returns {Object} - Объект с маппингом { slug: newsItem }
  */
@@ -41,7 +53,7 @@ export function createContentNewsMap(modules) {
 }
 
 /**
- * Получение slug для контентной новости по имени файла
+ * Получение slug для новости по имени файла
  * @param {string} filename - Название файла
  * @returns {string} - Slug
  */

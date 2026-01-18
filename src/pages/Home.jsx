@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import '../styles/home.css';
 import { scrollToTop } from '../utils/scrollToTop';
 
-const Home = ({ news, matches }) => {
+const Home = ({ news, matches, newsSlugMap }) => {
   const latestNews = news && news.length > 0 ? news.slice(0, 5) : [];
   const featuredNews = latestNews.length > 0 ? latestNews[0] : null;
   const otherNews = latestNews.length > 1 ? latestNews.slice(1) : [];
 
-  const getNewsIndex = (newsItem) => {
-    return news ? news.findIndex(item => item === newsItem) : -1;
+  const getNewsSlug = (newsItem) => {
+    return Object.keys(newsSlugMap).find(key => newsSlugMap[key] === newsItem);
   };
 
   const upcomingMatches = matches && matches.length > 0 
@@ -34,7 +34,7 @@ const Home = ({ news, matches }) => {
         <section className="home-news">
           {featuredNews && (
             <Link 
-              to={`/news/${getNewsIndex(featuredNews)}`} 
+              to={`/news/${getNewsSlug(featuredNews)}`} 
               className="featured-news-link"
             >
               <article className="featured-news">
@@ -57,11 +57,11 @@ const Home = ({ news, matches }) => {
           {otherNews.length > 0 && (
             <div className="news-grid">
               {otherNews.map((item, index) => {
-                const newsIndex = getNewsIndex(item);
+                const newsSlug = getNewsSlug(item);
                 return (
                   <Link 
                     key={index} 
-                    to={`/news/${newsIndex}`}
+                    to={`/news/${newsSlug}`}
                     className="news-card-link"
                   >
                     <article className="news-card">
@@ -138,7 +138,7 @@ const Home = ({ news, matches }) => {
                         <div className="schedule-match-info">
                           <div className="schedule-logos">
                             <div className="schedule-logo-circle">
-                              <img src="/vim.png" alt="Наша команда" className="schedule-logo" />
+                              <img src={match.ourTeamLogo || "/vim.png"} alt="Наша команда" className="schedule-logo" />
                             </div>
                             {!isPubgMobile && (
                               <>
@@ -203,7 +203,7 @@ const Home = ({ news, matches }) => {
                     <div className={`next-match-teams ${isPubgMobile ? 'next-match-teams-vertical' : ''}`}>
                       <div className="next-match-team">
                         <div className="next-match-logo-circle">
-                          <img src="/vim.png" alt="Наша команда" className="next-match-logo" />
+                          <img src={nextMatch.ourTeamLogo || "/vim.png"} alt="Наша команда" className="next-match-logo" />
                         </div>
                         <span className="next-match-team-name">{nextMatch.ourTeamName}</span>
                       </div>

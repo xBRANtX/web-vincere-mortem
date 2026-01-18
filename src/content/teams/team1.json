@@ -6,35 +6,31 @@
   "players": [
     {
       "nickname": "Luxus",
-      "name": null,
       "fullName": "Alexander",
       "country": "DE",
       "role": "FRAGGER",
-      "avatar": "/images/avatars/luxus.png"
+      "avatar": "/images/uploads/luxus.png"
     },
     {
       "nickname": "Cmetana",
-      "name": null,
       "fullName": "Alexander",
       "country": "DE",
       "role": "CAP",
-      "avatar": "/images/avatars/cmetana.png"
+      "avatar": "/images/uploads/cmetana.png"
     },
     {
       "nickname": "Shoom",
-      "name": null,
       "fullName": "Danil",
       "country": "DE",
       "role": "FRAGGER",
-      "avatar": "/images/avatars/shoom.png"
+      "avatar": "/images/uploads/shoom.png"
     },
     {
       "nickname": "Winnie",
-      "name": null,
       "fullName": "Peter",
       "country": "DE",
       "role": "FRAGGER",
-      "avatar": "/images/avatars/winnie.png"
+      "avatar": "/images/uploads/winnie.png"
     }
   ],
   "achievements": [
@@ -50,11 +46,11 @@
     "PMCO EU Spring 2022 #3"
   ],
   "seasonStats": {
-    "Matches": "...",
-    "Wins": "...",
-    "Losses": "...",
-    "Winrate": "...",
-    "Avg Damage": "...",
-    "K/D Ratio": "..."
+    "Matches": "0",
+    "Wins": "0",
+    "Losses": "0",
+    "Winrate": "0",
+    "Avg Damage": "0",
+    "K/D Ratio": "0"
   }
 }

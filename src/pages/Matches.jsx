@@ -62,50 +62,69 @@ const Matches = ({ matches }) => {
         <section className="matches-section-upcoming">
           <h2 className="matches-section-title">ПРЕДСТОЯЩИЕ МАТЧИ</h2>
           <div className="matches-list">
-            {paginatedUpcomingMatches.map((match, index) => (
-              <div key={index} className="match-card">
-                <div className="match-card-content">
-                  <div className="match-teams">
-                    <div className="match-team">
-                      <div className="match-logo-circle">
-                        <img src="/vim.png" alt="Наша команда" className="match-logo" />
+            {paginatedUpcomingMatches.map((match, index) => {
+              const isPubgMobile = match.discipline === "PUBG MOBILE";
+              const isNextMatch = index === 0 && currentPage === 1;
+              
+              return (
+                <div key={index} className="match-card">
+                  <div className="match-card-content">
+                    <div className="match-teams-left">
+                      <div className="match-team">
+                        <div className="match-logo-circle">
+                          <img src={match.ourTeamLogo || "/vim.png"} alt="Наша команда" className="match-logo" />
+                        </div>
                       </div>
-                      <span className="match-team-name">VIM</span>
+                      {!isPubgMobile && (
+                        <>
+                          <div className="match-vs">
+                            <span className="match-vs-text">VS</span>
+                          </div>
+                          <div className="match-team">
+                            {match.logo && (
+                              <div className="match-logo-circle">
+                                <img src={match.logo} alt={match.opponent} className="match-logo" />
+                              </div>
+                            )}
+                          </div>
+                        </>
+                      )}
                     </div>
-                    <div className="match-vs">
-                      <span className="match-vs-text">VS</span>
+
+                    <div className="match-info-center">
                       {match.discipline && (
                         <span className="match-discipline">{match.discipline}</span>
                       )}
+                      <p className="match-tournament">{match.tournament}</p>
+                      <p className="match-datetime">
+                        {new Date(match.date).toLocaleDateString('ru-RU', { 
+                          day: '2-digit',
+                          month: '2-digit',
+                          year: 'numeric'
+                        }).replace(/\//g, '.')} • {new Date(match.date).toLocaleTimeString('ru-RU', { 
+                          hour: '2-digit', 
+                          minute: '2-digit' 
+                        })}
+                      </p>
+                      {match.venue && (
+                        <p className="match-venue">{match.venue}</p>
+                      )}
                     </div>
-                    <div className="match-team">
-                      {match.logo && (
-                        <div className="match-logo-circle">
-                          <img src={match.logo} alt={match.opponent} className="match-logo" />
+
+                    <div className="match-action-right">
+                      {isNextMatch && (
+                        <div className="match-watch-button">
+                          <span className="match-watch-text">СМОТРЕТЬ</span>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
                         </div>
                       )}
-                      <span className="match-team-name">{match.opponent}</span>
                     </div>
                   </div>
-                  <div className="match-info">
-                    <p className="match-tournament">{match.tournament}</p>
-                    <p className="match-datetime">
-                      {new Date(match.date).toLocaleDateString('ru-RU', { 
-                        day: '2-digit',
-                        month: '2-digit',
-                        year: 'numeric'
-                      }).replace(/\//g, '.')} • {new Date(match.date).toLocaleTimeString('ru-RU', { 
-                        hour: '2-digit', 
-                        minute: '2-digit' 
-                      })}
-                    </p>
-                    {match.venue && (
-                      <p className="match-venue">{match.venue}</p>
-                    )}
-                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {upcomingMatches.length > matchesPerPage && (
             <div className="pagination">
@@ -153,56 +172,69 @@ const Matches = ({ matches }) => {
         <section className="matches-section-played">
           <h2 className="matches-section-title">СЫГРАННЫЕ МАТЧИ</h2>
           <div className="matches-list">
-            {paginatedPlayedMatches.map((match, index) => (
-              <div key={index} className="match-card match-card-played">
-                <div className="match-card-content">
-                  <div className="match-teams">
-                    <div className="match-team">
-                      <div className="match-logo-circle">
-                        <img src="/vim.png" alt="Наша команда" className="match-logo" />
+            {paginatedPlayedMatches.map((match, index) => {
+              const isPubgMobile = match.discipline === "PUBG MOBILE";
+              
+              return (
+                <div key={index} className="match-card match-card-played">
+                  <div className="match-card-content">
+                    <div className="match-teams-left">
+                      <div className="match-team">
+                        <div className="match-logo-circle">
+                          <img src={match.ourTeamLogo || "/vim.png"} alt="Наша команда" className="match-logo" />
+                        </div>
                       </div>
-                      <span className="match-team-name">VIM</span>
-                      {match.score && (
-                        <span className="match-score">{match.score.split(':')[0]}</span>
+                      {!isPubgMobile && (
+                        <>
+                          <div className="match-vs">
+                            <span className="match-vs-text">VS</span>
+                          </div>
+                          <div className="match-team">
+                            {match.logo && (
+                              <div className="match-logo-circle">
+                                <img src={match.logo} alt={match.opponent} className="match-logo" />
+                              </div>
+                            )}
+                          </div>
+                        </>
                       )}
                     </div>
-                    <div className="match-vs">
-                      <span className="match-vs-text">VS</span>
+
+                    <div className="match-info-center">
                       {match.discipline && (
                         <span className="match-discipline">{match.discipline}</span>
                       )}
+                      <p className="match-tournament">{match.tournament}</p>
+                      <p className="match-datetime">
+                        {new Date(match.date).toLocaleDateString('ru-RU', { 
+                          day: '2-digit',
+                          month: '2-digit',
+                          year: 'numeric'
+                        }).replace(/\//g, '.')} • {new Date(match.date).toLocaleTimeString('ru-RU', { 
+                          hour: '2-digit', 
+                          minute: '2-digit' 
+                        })}
+                      </p>
+                      {match.venue && (
+                        <p className="match-venue">{match.venue}</p>
+                      )}
                     </div>
-                    <div className="match-team">
-                      {match.logo && (
-                        <div className="match-logo-circle">
-                          <img src={match.logo} alt={match.opponent} className="match-logo" />
+
+                    <div className="match-action-right">
+                      {match.score && (
+                        <div className="match-placement">
+                          {isPubgMobile ? (
+                            <span className="match-placement-text">TOP-{match.score}</span>
+                          ) : (
+                            <span className="match-score-result">{match.score}</span>
+                          )}
                         </div>
                       )}
-                      <span className="match-team-name">{match.opponent}</span>
-                      {match.score && (
-                        <span className="match-score">{match.score.split(':')[1]}</span>
-                      )}
                     </div>
                   </div>
-                  <div className="match-info">
-                    <p className="match-tournament">{match.tournament}</p>
-                    <p className="match-datetime">
-                      {new Date(match.date).toLocaleDateString('ru-RU', { 
-                        day: '2-digit',
-                        month: '2-digit',
-                        year: 'numeric'
-                      }).replace(/\//g, '.')} • {new Date(match.date).toLocaleTimeString('ru-RU', { 
-                        hour: '2-digit', 
-                        minute: '2-digit' 
-                      })}
-                    </p>
-                    {match.venue && (
-                      <p className="match-venue">{match.venue}</p>
-                    )}
-                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           {playedMatches.length > matchesPerPage && (
             <div className="pagination">

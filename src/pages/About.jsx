@@ -9,19 +9,19 @@ const About = () => {
       </div>
       <div className="about-team-container">
         <div className="about-team-item">
-          <h2 className="about-team-item-title">0</h2>
+          <h2 className="about-team-item-title">X</h2>
           <p className="about-team-item-text">ПОБЕД</p>
         </div>
         <div className="about-team-item">
-          <h2 className="about-team-item-title">1</h2>
+          <h2 className="about-team-item-title">2K+</h2>
           <p className="about-team-item-text">ФАНАТОВ</p>
         </div>
         <div className="about-team-item">
           <h2 className="about-team-item-title">1</h2>
-          <p className="about-team-item-text">ДИСЦИПЛИН</p>
+          <p className="about-team-item-text">ДИСЦИПЛИНА</p>
         </div>
         <div className="about-team-item">
-          <h2 className="about-team-item-title">$0</h2>
+          <h2 className="about-team-item-title">X</h2>
           <p className="about-team-item-text">ПРИЗОВЫХ</p>
         </div>
       </div>

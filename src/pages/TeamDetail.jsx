@@ -61,7 +61,7 @@ const TeamDetail = ({ teams }) => {
               <div className="team-players-list">
                 {team.players && team.players.length > 0 ? (
                   team.players.map((player, index) => {
-                    const playerNickname = typeof player === 'string' ? player : (player.nickname || player.name || 'Player');
+                    const playerNickname = typeof player === 'string' ? player : (player.nickname || 'Player');
                     const playerFullName = typeof player === 'object' ? player.fullName : null;
                     const playerCountry = typeof player === 'object' ? player.country : null;
                     const playerRole = typeof player === 'object' ? player.role : null;
