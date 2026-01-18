@@ -174,7 +174,7 @@ const Header = () => {
               </div>
               <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-content">
-                  <Link to="/" className="mobile-nav-link" onClick={scrollToTop}>ГЛАВНАЯ</Link>
+                  <Link to="/" className="mobile-nav-link" onClick={handleMobileLinkClick}>ГЛАВНАЯ</Link>
                   <Link to="/news" className="mobile-nav-link" onClick={handleMobileLinkClick}>НОВОСТИ</Link>
                   <Link to="/matches" className="mobile-nav-link" onClick={handleMobileLinkClick}>МАТЧИ</Link>
                   <Link to="/teams" className="mobile-nav-link" onClick={handleMobileLinkClick}>КОМАНДЫ</Link>
