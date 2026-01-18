@@ -1,16 +1,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import '../styles/teamDetail.css';
 import { scrollToTop } from '../utils/scrollToTop';
 
-const TeamDetail = ({ teams }) => {
-  const { id } = useParams();
+const TeamDetail = ({ teamSlugMap }) => {
+  const { slug } = useParams();
   const navigate = useNavigate();
-  const teamIndex = parseInt(id);
+  const [showAllAchievements, setShowAllAchievements] = useState(false);
   
-  const team = teams && teams.length > 0 && teamIndex >= 0 && teamIndex < teams.length 
-    ? teams[teamIndex] 
-    : null;
+  const team = teamSlugMap && slug ? teamSlugMap[slug] : null;
 
   if (!team) {
     return (
@@ -125,12 +124,34 @@ const TeamDetail = ({ teams }) => {
                     <h3 className="team-achievements-title">ДОСТИЖЕНИЯ</h3>
                   </div>
                   <ul className="team-achievements-list-detail">
-                    {team.achievements.map((achievement, index) => (
+                    {(showAllAchievements ? team.achievements : team.achievements.slice(0, 3)).map((achievement, index) => (
                       <li key={index} className="team-achievement-item">
                         <span>{achievement}</span>
                       </li>
                     ))}
                   </ul>
+                  {team.achievements.length > 3 && (
+                    <button 
+                      className="team-achievements-toggle"
+                      onClick={() => setShowAllAchievements(!showAllAchievements)}
+                      aria-label={showAllAchievements ? "Свернуть достижения" : "Показать все достижения"}
+                    >
+                      <svg 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{ 
+                          transform: showAllAchievements ? 'rotate(180deg)' : 'rotate(0deg)',
+                          transition: 'transform 0.3s ease'
+                        }}
+                      >
+                        <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      <span>{showAllAchievements ? 'Свернуть' : `Показать еще ${team.achievements.length - 3}`}</span>
+                    </button>
+                  )}
                 </div>
               )}
             </section>

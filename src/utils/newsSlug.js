@@ -1,9 +1,8 @@
 // Утилита для работы со slug новостей
 
 /**
- * Генерирует slug на основе названия файла
- * @param {string} filename - Название файла (например, "2026-01-12-news.json")
- * @returns {string} - Slug (например, "2026-01-12-news")
+ * @param {string} filename - filename
+ * @returns {string} - slug
  */
 export function generateSlugFromFilename(filename) {
   const nameWithoutExt = filename.replace(/\.json$/, '');
@@ -11,9 +10,8 @@ export function generateSlugFromFilename(filename) {
 }
 
 /**
- * Создание маппинга slug -> новость для всех новостей
- * @param {Object} modules - Объект с модулями файлов
- * @returns {Object} - Объект с маппингом { slug: newsItem }
+ * @param {Object} modules - modules
+ * @returns {Object} - slugMap
  */
 export function createNewsSlugMap(modules) {
   const slugMap = {};
@@ -32,9 +30,8 @@ export function createNewsSlugMap(modules) {
 }
 
 /**
- * Создание маппинга slug -> новость для новостей категории CONTENT (для обратной совместимости)
- * @param {Object} modules - Объект с модулями файлов
- * @returns {Object} - Объект с маппингом { slug: newsItem }
+ * @param {Object} modules - modules
+ * @returns {Object} - contentMap
  */
 export function createContentNewsMap(modules) {
   const contentMap = {};

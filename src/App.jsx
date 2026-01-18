@@ -12,6 +12,7 @@ import Matches from './pages/Matches';
 import Teams from './pages/Teams';
 import TeamDetail from './pages/TeamDetail';
 import { createNewsSlugMap } from './utils/newsSlug';
+import { createTeamSlugMap } from './utils/teamSlug';
 import { NewsProvider } from './contexts/NewsContext';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   const [newsSlugMap, setNewsSlugMap] = useState({})
   const [matches, setMatches] = useState([])
   const [teams, setTeams] = useState([])
+  const [teamSlugMap, setTeamSlugMap] = useState({})
 
   useEffect(() => {
     const modules = import.meta.glob('./content/news/*.json', { eager: true })
@@ -60,8 +62,10 @@ function App() {
   useEffect(() => {
     const modules = import.meta.glob('./content/teams/*.json', { eager: true })
     const teamsArray = Object.values(modules).map((mod) => mod.default)
+    const teamsMap = createTeamSlugMap(modules)
     
     setTeams(teamsArray)
+    setTeamSlugMap(teamsMap)
   }, [])
 
   return (
@@ -72,8 +76,8 @@ function App() {
           <Route path="news" element={<News news={publicNews} newsSlugMap={newsSlugMap} />} />
           <Route path="news/:slug" element={<NewsDetail news={news} publicNews={publicNews} newsSlugMap={newsSlugMap} />} />
           <Route path="matches" element={<Matches matches={matches} />} />
-          <Route path="teams" element={<Teams teams={teams} />} />
-          <Route path="teams/:id" element={<TeamDetail teams={teams} />} />
+          <Route path="teams" element={<Teams teams={teams} teamSlugMap={teamSlugMap} />} />
+          <Route path="teams/:slug" element={<TeamDetail teamSlugMap={teamSlugMap} />} />
           <Route path="shop" element={<div><h1>Магазин</h1><p>Страница магазина</p></div>} />
           <Route path="about" element={<About />} />
         </Route>

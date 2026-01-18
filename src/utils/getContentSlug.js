@@ -4,18 +4,16 @@
 import { getSlugFromFilename } from './newsSlug';
 
 /**
- * Получает slug для контентной новости
- * @param {string} filename - Имя файла (например, "2026-01-12-новость.json")
- * @returns {string} - Slug для использования в URL
+ * @param {string} filename - filename
+ * @returns {string} - slug
  */
 export function getContentNewsSlug(filename) {
   return getSlugFromFilename(filename);
 }
 
 /**
- * Генерирует полный URL для контентной новости
- * @param {string} filename - Имя файла
- * @returns {string} - Полный URL (например, "/news/content/a1b2c3d4")
+ * @param {string} filename - filename
+ * @returns {string} - full URL
  */
 export function getContentNewsUrl(filename) {
   const slug = getContentNewsSlug(filename);

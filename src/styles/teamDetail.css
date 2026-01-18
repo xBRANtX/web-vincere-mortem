@@ -329,6 +329,35 @@
   flex-shrink: 0;
 }
 
+.team-achievements-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1px solid #2A2A2A;
+  color: #d0d4da;
+  font-family: 'TT Norms Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.team-achievements-toggle:hover {
+  background-color: #262626;
+  border-color: #dc2626;
+  color: #fff;
+}
+
+.team-achievements-toggle svg {
+  stroke: currentColor;
+}
+
 .team-stats-header {
   display: flex;
   gap: 10px;

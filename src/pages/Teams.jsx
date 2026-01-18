@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/teams.css';
 import { scrollToTop } from '../utils/scrollToTop';
+import { getSlugFromTeam } from '../utils/teamSlug';
 
-const Teams = ({ teams }) => {
+const Teams = ({ teams, teamSlugMap }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const teamsPerPage = 6;
 
@@ -24,10 +25,12 @@ const Teams = ({ teams }) => {
       {paginatedTeams.length > 0 && (
         <section className="teams-section">
           <div className="teams-list">
-            {paginatedTeams.map((team, index) => (
+            {paginatedTeams.map((team, index) => {
+              const teamSlug = getSlugFromTeam(team, teamSlugMap);
+              return (
               <Link 
                 key={index} 
-                to={`/teams/${index}`} 
+                to={`/teams/${teamSlug}`} 
                 className="team-card-link"
                 onClick={scrollToTop}
               >
@@ -80,7 +83,7 @@ const Teams = ({ teams }) => {
                 </div>
               </div>
               </Link>
-            ))}
+            )})}
           </div>
           {teams && teams.length > teamsPerPage && (
             <div className="pagination">

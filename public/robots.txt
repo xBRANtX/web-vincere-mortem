@@ -1,0 +1,14 @@
+# robots.txt для Vincere Mortem
+
+User-agent: *
+Allow: /
+
+Allow: /#/news
+Allow: /#/matches
+Allow: /#/teams
+Allow: /#/about
+Allow: /#/shop
+
+Disallow: /admin/
+
+Sitemap: https://vincere-mortem.ru/sitemap.xml
