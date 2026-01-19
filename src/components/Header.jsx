@@ -5,7 +5,7 @@ import { scrollToTop } from '../utils/scrollToTop';
 import { useNews } from '../contexts/NewsContext';
 
 const Header = () => {
-  const { publicNews } = useNews();
+  const { publicNews, newsSlugMap } = useNews();
   const navigate = useNavigate();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -37,9 +37,9 @@ const Header = () => {
   }, [searchQuery, publicNews]);
 
   const handleResultClick = (newsItem) => {
-    const index = publicNews.findIndex(item => item === newsItem);
-    if (index !== -1) {
-      navigate(`/news/${index}`);
+    const slug = Object.keys(newsSlugMap).find(key => newsSlugMap[key] === newsItem);
+    if (slug) {
+      navigate(`/news/${slug}`);
       handleSearchClose();
       scrollToTop();
     }
@@ -209,26 +209,23 @@ const Header = () => {
               </div>
               {searchQuery.trim() && searchResults.length > 0 && (
                 <div className="search-results">
-                  {searchResults.map((newsItem, index) => {
-                    const newsIndex = publicNews.findIndex(item => item === newsItem);
-                    return (
-                      <div
-                        key={index}
-                        className="search-result-item"
-                        onClick={() => handleResultClick(newsItem)}
-                      >
-                        {newsItem.thumbnail && (
-                          <img src={newsItem.thumbnail} alt={newsItem.title} className="search-result-image" />
+                  {searchResults.map((newsItem, index) => (
+                    <div
+                      key={index}
+                      className="search-result-item"
+                      onClick={() => handleResultClick(newsItem)}
+                    >
+                      {newsItem.thumbnail && (
+                        <img src={newsItem.thumbnail} alt={newsItem.title} className="search-result-image" />
+                      )}
+                      <div className="search-result-content">
+                        <h4 className="search-result-title">{newsItem.title}</h4>
+                        {newsItem.category && (
+                          <span className="search-result-category">{newsItem.category}</span>
                         )}
-                        <div className="search-result-content">
-                          <h4 className="search-result-title">{newsItem.title}</h4>
-                          {newsItem.category && (
-                            <span className="search-result-category">{newsItem.category}</span>
-                          )}
-                        </div>
                       </div>
-                    );
-                  })}
+                    </div>
+                  ))}
                 </div>
               )}
               {searchQuery.trim() && searchResults.length === 0 && (

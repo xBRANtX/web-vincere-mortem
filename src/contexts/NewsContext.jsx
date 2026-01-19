@@ -10,9 +10,9 @@ export const useNews = () => {
   return context;
 };
 
-export const NewsProvider = ({ children, publicNews }) => {
+export const NewsProvider = ({ children, publicNews, newsSlugMap }) => {
   return (
-    <NewsContext.Provider value={{ publicNews }}>
+    <NewsContext.Provider value={{ publicNews, newsSlugMap }}>
       {children}
     </NewsContext.Provider>
   );

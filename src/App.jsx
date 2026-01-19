@@ -69,7 +69,7 @@ function App() {
   }, [])
 
   return (
-    <NewsProvider publicNews={publicNews}>
+    <NewsProvider publicNews={publicNews} newsSlugMap={newsSlugMap}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home news={publicNews} matches={matches} newsSlugMap={newsSlugMap} />} />
