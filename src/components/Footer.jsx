@@ -12,7 +12,7 @@ const Footer = () => {
             <img src="/vim.png" alt="Логотип" className="logo-img" />
             <span className="nav-brand"><span style={{ color: '#dc2626' }}>VINCERE</span><span className="nav-brand-part">MORTEM</span></span>
           </div>
-          <p className="footer-logo-text">ZXC</p>
+          <p className="footer-logo-text">Организация по множеству дисциплин, которая занимается продвижением нашего региона и комьюнити на высший и честный уровень.</p>
         </div>
         <div className="footer-links">
           <h3 className="footer-menu-title">МЕНЮ</h3>
@@ -21,14 +21,14 @@ const Footer = () => {
             <li><Link to="/news" className="footer-link" onClick={scrollToTop}>Новости</Link></li>
             <li><Link to="/matches" className="footer-link" onClick={scrollToTop}>Матчи</Link></li>
             <li><Link to="/teams" className="footer-link" onClick={scrollToTop}>Команды</Link></li>
-            <li><Link to="/shop" className="footer-link" onClick={scrollToTop}>Магазин</Link></li>
+            {/* <li><Link to="/shop" className="footer-link" onClick={scrollToTop}>Магазин</Link></li> */}
             <li><Link to="/about" className="footer-link" onClick={scrollToTop}>О клубе</Link></li>
           </ul>
         </div>
         <div className="footer-partners">
           <h3 className="footer-partners-title">ПАРТНЁРЫ</h3>
           <ul className="footer-partners-list">
-            <li><a href="" className="footer-partners-link">...</a></li>
+            <li><a href="" className="footer-partners-link"></a></li>
           </ul>
         </div>
         <div className="footer-social">

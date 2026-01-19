@@ -145,7 +145,7 @@ const Header = () => {
                 <Link to="/news" className="nav-link" onClick={scrollToTop}>НОВОСТИ</Link>
                 <Link to="/matches" className="nav-link" onClick={scrollToTop}>МАТЧИ</Link>
                 <Link to="/teams" className="nav-link" onClick={scrollToTop}>КОМАНДЫ</Link>
-                <Link to="/shop" className="nav-link" onClick={scrollToTop}>МАГАЗИН</Link>
+                {/* <Link to="/shop" className="nav-link" onClick={scrollToTop}>МАГАЗИН</Link> */}
                 <Link to="/about" className="nav-link" onClick={scrollToTop}>О КЛУБЕ</Link>
               </div>
               <div className="nav-actions-section">

@@ -86,7 +86,7 @@ const Home = ({ news, matches, newsSlugMap }) => {
         </section>
       )}
 
-      <section className="popular-products-section">
+      {/* <section className="popular-products-section">
         <div className="popular-products-container">
           <h2 className="popular-products-title">ПОПУЛЯРНЫЕ <span style={{ color: "#dc2626" }}>ТОВАРЫ</span></h2>
           <div className="products-grid">
@@ -122,7 +122,7 @@ const Home = ({ news, matches, newsSlugMap }) => {
             <button className="products-view-more-button" onClick={scrollToTop}>СМОТРЕТЬ ЕЩЕ</button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="matches-section">
         <div className="matches-container">
@@ -262,13 +262,13 @@ const Home = ({ news, matches, newsSlugMap }) => {
         </div>
       </section>
 
-      <div className="sponsors-section">
+      {/* <div className="sponsors-section">
         <div className="sponsors-container">
           <div className="sponsors-list">
             <div className="sponsor-item">LITENERGY</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
