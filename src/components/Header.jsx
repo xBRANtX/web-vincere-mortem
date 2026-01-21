@@ -178,7 +178,7 @@ const Header = () => {
                   <Link to="/news" className="mobile-nav-link" onClick={handleMobileLinkClick}>НОВОСТИ</Link>
                   <Link to="/matches" className="mobile-nav-link" onClick={handleMobileLinkClick}>МАТЧИ</Link>
                   <Link to="/teams" className="mobile-nav-link" onClick={handleMobileLinkClick}>КОМАНДЫ</Link>
-                  <Link to="/shop" className="mobile-nav-link" onClick={handleMobileLinkClick}>МАГАЗИН</Link>
+                  {/* <Link to="/shop" className="mobile-nav-link" onClick={handleMobileLinkClick}>МАГАЗИН</Link> */}
                   <Link to="/about" className="mobile-nav-link" onClick={handleMobileLinkClick}>О КЛУБЕ</Link>
                 </div>
               </div>
