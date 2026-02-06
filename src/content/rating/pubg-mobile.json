@@ -1,0 +1,38 @@
+{
+  "slug": "pubg-mobile",
+  "discipline": "PUBG MOBILE",
+  "players": [
+    {
+      "nickname": "Luxus",
+      "fullName": "",
+      "teamName": "Vincere Mortem",
+      "kills": 50,
+      "tournamentsPlayed": 28,
+      "country": "Германия"
+    },
+    {
+      "nickname": "Cmetana",
+      "fullName": "",
+      "teamName": "Vincere Mortem",
+      "kills": 49,
+      "tournamentsPlayed": 28,
+      "country": "Германия"
+    },
+    {
+      "nickname": "Shoom",
+      "fullName": "",
+      "teamName": "Vincere Mortem",
+      "kills": 48,
+      "tournamentsPlayed": 28,
+      "country": "Германия"
+    },
+    {
+      "nickname": "Winnie",
+      "fullName": "",
+      "teamName": "Vincere Mortem",
+      "kills": 47,
+      "tournamentsPlayed": 28,
+      "country": "Германия"
+    }
+  ]
+}

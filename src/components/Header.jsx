@@ -145,8 +145,9 @@ const Header = () => {
                 <Link to="/news" className="nav-link" onClick={scrollToTop}>НОВОСТИ</Link>
                 <Link to="/matches" className="nav-link" onClick={scrollToTop}>МАТЧИ</Link>
                 <Link to="/teams" className="nav-link" onClick={scrollToTop}>КОМАНДЫ</Link>
+                <Link to="/rating" className="nav-link" onClick={scrollToTop}>РЕЙТИНГ</Link>
                 {/* <Link to="/shop" className="nav-link" onClick={scrollToTop}>МАГАЗИН</Link> */}
-                <Link to="/about" className="nav-link" onClick={scrollToTop}>О КЛУБЕ</Link>
+                <Link to="/about" className="nav-link" onClick={scrollToTop}>О НАС</Link>
               </div>
               <div className="nav-actions-section">
                 <button 
@@ -178,6 +179,7 @@ const Header = () => {
                   <Link to="/news" className="mobile-nav-link" onClick={handleMobileLinkClick}>НОВОСТИ</Link>
                   <Link to="/matches" className="mobile-nav-link" onClick={handleMobileLinkClick}>МАТЧИ</Link>
                   <Link to="/teams" className="mobile-nav-link" onClick={handleMobileLinkClick}>КОМАНДЫ</Link>
+                  <Link to="/rating" className="mobile-nav-link" onClick={handleMobileLinkClick}>РЕЙТИНГ</Link>
                   {/* <Link to="/shop" className="mobile-nav-link" onClick={handleMobileLinkClick}>МАГАЗИН</Link> */}
                   <Link to="/about" className="mobile-nav-link" onClick={handleMobileLinkClick}>О КЛУБЕ</Link>
                 </div>
