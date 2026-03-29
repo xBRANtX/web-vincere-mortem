@@ -3,36 +3,11 @@
   "discipline": "PUBG MOBILE: Pro Scene",
   "players": [
     {
-      "nickname": "Luxus",
-      "fullName": "",
-      "teamName": "Vincere Mortem",
-      "kills": 50,
-      "tournamentsPlayed": 28,
-      "country": "Германия"
-    },
-    {
-      "nickname": "Cmetana",
-      "fullName": "",
-      "teamName": "Vincere Mortem",
-      "kills": 49,
-      "tournamentsPlayed": 28,
-      "country": "Германия"
-    },
-    {
-      "nickname": "Shoom",
-      "fullName": "",
-      "teamName": "Vincere Mortem",
-      "kills": 48,
-      "tournamentsPlayed": 28,
-      "country": "Германия"
-    },
-    {
-      "nickname": "Winnie",
-      "fullName": "",
-      "teamName": "Vincere Mortem",
-      "kills": 47,
-      "tournamentsPlayed": 28,
-      "country": "Германия"
+      "kills": 0,
+      "tournamentsPlayed": 0,
+      "nickname": "z",
+      "teamName": "z",
+      "country": "z"
     }
   ]
 }
