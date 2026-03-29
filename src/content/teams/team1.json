@@ -5,25 +5,11 @@
   "description": "Основной состав по PUBG Mobile.",
   "players": [
     {
-      "nickname": "Luxus",
-      "fullName": "Alexander",
-      "country": "DE",
-      "role": "FRAGGER",
-      "avatar": "/images/uploads/luxus.png"
-    },
-    {
       "nickname": "Cmetana",
       "fullName": "Alexander",
       "country": "DE",
       "role": "CAP",
       "avatar": "/images/uploads/cmetana.png"
-    },
-    {
-      "nickname": "Winnie",
-      "fullName": "Peter",
-      "country": "DE",
-      "role": "FRAGGER",
-      "avatar": "/images/uploads/winnie.png"
     }
   ],
   "achievements": [
