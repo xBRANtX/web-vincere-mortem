@@ -3,40 +3,8 @@
   "discipline": "PUBG MOBILE",
   "image": "/images/uploads/team1.jpg",
   "description": "Женский состав по PUBG Mobile.",
-  "players": [
-    {
-      "nickname": "Marusya77",
-      "fullName": "Mariya",
-      "country": "RU",
-      "role": "PLAYMAKER",
-      "avatar": "/images/uploads/marusya77.png"
-    },
-    {
-      "nickname": "Mulan",
-      "fullName": "Alena",
-      "country": "RU",
-      "role": "FRAGGER",
-      "avatar": "/images/uploads/mulan.png"
-    },
-    {
-      "nickname": "Dyaka",
-      "fullName": "Anna",
-      "country": "RU",
-      "role": "CAP",
-      "avatar": "/images/uploads/dyaka.png"
-    },
-    {
-      "nickname": "Vixsy",
-      "fullName": "Viktoria",
-      "country": "RU",
-      "role": "SUPPORT",
-      "avatar": "/images/uploads/vixsy.png"
-    }
-  ],
-  "achievements": [
-    "PMGLL Group Stage 2026 #3",
-    "PMWEL Finals 2025 #11"
-  ],
+  "players": [],
+  "achievements": [],
   "seasonStats": {
     "Matches": "0",
     "Wins": "0",
