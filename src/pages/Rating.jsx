@@ -57,7 +57,7 @@ const Rating = ({ ratingList }) => {
           <thead>
             <tr>
               <th className="rating-col-top">ТОП</th>
-              <th>Ник</th>
+              {showNicknames && <th>Ник</th>}
               <th>Команда</th>
               <th>Киллы</th>
               <th>Очки</th>
@@ -72,7 +72,7 @@ const Rating = ({ ratingList }) => {
                 return (
                   <tr key={index}>
                     <td className={`rating-col-top ${topClass}`}>{top}</td>
-                    <td>{showNicknames ? (player.nickname ?? '—') : '—'}</td>
+                    {showNicknames && (<td>{player.nickname ?? '—'}</td>)}
                     <td>{player.teamName ?? '—'}</td>
                     <td>{player.kills ?? 0}</td>
                     <td>{player.tournamentsPlayed ?? 0}</td>
@@ -82,7 +82,7 @@ const Rating = ({ ratingList }) => {
               })
             ) : (
               <tr>
-                <td colSpan={6} className="rating-table-empty">
+                <td colSpan={showNicknames ? 6 : 5} className="rating-table-empty">
                   {current ? 'В этой дисциплине пока нет записей' : 'Выберите дисциплину'}
                 </td>
               </tr>
