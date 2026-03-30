@@ -2,12 +2,13 @@
   "discipline": "QUANTUM PM",
   "players": [
     {
-      "kills": 0,
-      "tournamentsPlayed": 0,
-      "nickname": "z",
-      "teamName": "z",
-      "country": "z"
+      "kills": 100500,
+      "tournamentsPlayed": 327873,
+      "teamName": "VINCERE MORTEM",
+      "country": "DE",
+      "nickname": "-"
     }
   ],
-  "slug": "quantum-pm"
+  "slug": "quantum-pm",
+  "showNicknames": false
 }
