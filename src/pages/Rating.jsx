@@ -57,7 +57,7 @@ const Rating = ({ ratingList }) => {
           <thead>
             <tr>
               <th className="rating-col-top">ТОП</th>
-              {showNicknames && <th>Ник</th>}
+              {showNicknames && <th>Никнейм</th>}
               <th>Команда</th>
               <th>Киллы</th>
               <th>Очки</th>
