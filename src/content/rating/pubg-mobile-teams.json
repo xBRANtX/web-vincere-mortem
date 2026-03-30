@@ -4,10 +4,11 @@
     {
       "kills": 0,
       "tournamentsPlayed": 0,
-      "nickname": "z",
+      "nickname": " ",
       "teamName": "z",
       "country": "z"
     }
   ],
-  "slug": "pubg-mobile-teams"
+  "slug": "pubg-mobile-teams",
+  "showNicknames": false
 }
