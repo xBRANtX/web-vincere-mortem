@@ -30,11 +30,12 @@ const Rating = ({ ratingList }) => {
   }, [ratingList, selectedSlug, disciplines]);
 
   const players = current?.players ?? [];
+  const showNicknames = current?.showNicknames ?? true;
 
   return (
     <div className="rating-page-container">
       <h1 className="rating-page-title">РЕЙТИНГ</h1>
-      <p className="rating-page-subtitle">Топ игроков по дисциплинам</p>
+      <p className="rating-page-subtitle">Топ рейтингов по направлениям</p>
 
       {disciplines.length > 0 && (
         <div className="rating-disciplines">
@@ -59,7 +60,7 @@ const Rating = ({ ratingList }) => {
               <th>Ник</th>
               <th>Команда</th>
               <th>Киллы</th>
-              <th>Турниры</th>
+              <th>Очки</th>
               <th>Страна</th>
             </tr>
           </thead>
@@ -71,7 +72,7 @@ const Rating = ({ ratingList }) => {
                 return (
                   <tr key={index}>
                     <td className={`rating-col-top ${topClass}`}>{top}</td>
-                    <td>{player.nickname ?? '—'}</td>
+                    <td>{showNicknames ? (player.nickname ?? '—') : '—'}</td>
                     <td>{player.teamName ?? '—'}</td>
                     <td>{player.kills ?? 0}</td>
                     <td>{player.tournamentsPlayed ?? 0}</td>

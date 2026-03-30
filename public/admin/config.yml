@@ -95,6 +95,9 @@ collections:
     fields:
       - {label: "Идентификатор (латиница, дефис)", name: "slug", widget: "string", required: true, hint: "Имя файла, например: pubg-mobile"}
       - {label: "Название дисциплины", name: "discipline", widget: "string", required: true, default: "PUBG MOBILE"}
+
+      - {label: "Показывать никнеймы", name: "showNicknames", widget: "boolean", default: true}
+
       - label: "Игроки (топ)"
         name: "players"
         widget: "list"
@@ -103,5 +106,5 @@ collections:
           - {label: "Ник", name: "nickname", widget: "string", required: true}
           - {label: "Название команды", name: "teamName", widget: "string", required: true}
           - {label: "Количество киллов", name: "kills", widget: "number", value_type: "int", required: true, default: 0}
-          - {label: "Сыгранных турниров", name: "tournamentsPlayed", widget: "number", value_type: "int", required: true, default: 0}
+          - {label: "Набранные очки", name: "tournamentsPlayed", widget: "number", value_type: "int", required: true, default: 0}
           - {label: "Страна (код)", name: "country", widget: "string", required: true, hint: "RU, DE, US"}
