@@ -3,10 +3,213 @@
   "players": [
     {
       "kills": 0,
-      "tournamentsPlayed": 0,
+      "tournamentsPlayed": 1598,
       "nickname": " ",
-      "teamName": "z",
-      "country": "z"
+      "teamName": "MADBULLS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 1387,
+      "nickname": " ",
+      "teamName": "CYBERHERO",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 1187,
+      "teamName": "VIRTUS.PRO",
+      "country": " ",
+      "nickname": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 780,
+      "nickname": " ",
+      "country": "  ",
+      "teamName": "ARCRED"
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 476,
+      "nickname": " ",
+      "teamName": "DAGESTAN77",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 417,
+      "nickname": " ",
+      "teamName": "KONINA POWER",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 366,
+      "nickname": " ",
+      "teamName": "THE721 AGGRESSOR",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 337,
+      "nickname": "VINCERE MORTEM",
+      "teamName": "VINCERE MORTEM",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 225,
+      "nickname": "ENERGY GAMING",
+      "teamName": "ENERGY GAMING",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 124,
+      "nickname": " ",
+      "teamName": "MAJOR PRIDE",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 119,
+      "nickname": "WOLVES ESPORTS",
+      "teamName": "WOLVES ESPORTS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 115,
+      "nickname": "EX. ROYALL ESPORTS",
+      "teamName": "EX. ROYALL ESPORTS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 108,
+      "nickname": " ",
+      "teamName": "MONEY MAKERS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 102,
+      "nickname": " ",
+      "teamName": "A LOW BLOW",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 101,
+      "nickname": "OLD NOT",
+      "teamName": "OLD NOT",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 94,
+      "nickname": " ",
+      "teamName": "PMCS ESPORTS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 73,
+      "nickname": " ",
+      "teamName": "TOP TEAM",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 71,
+      "nickname": " ",
+      "teamName": "WAKE ESPORTS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 61,
+      "nickname": " ",
+      "teamName": "AFTER LIFE",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 58,
+      "nickname": " ",
+      "teamName": "27 PLUS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 56,
+      "nickname": " ",
+      "teamName": "AVALANCHE TEAM",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 44,
+      "nickname": " ",
+      "teamName": "BAZA TEAM",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 42,
+      "nickname": " ",
+      "teamName": "TT PROJECT",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 39,
+      "nickname": " ",
+      "teamName": "DESTRUCTION",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 37,
+      "nickname": " ",
+      "teamName": "NAIX GAMING",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 35,
+      "nickname": " ",
+      "teamName": "FIDAIN ESPORTS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 34,
+      "nickname": " ",
+      "teamName": "LIMITLESS",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 32,
+      "nickname": " ",
+      "teamName": "SECRET WAY",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 30,
+      "nickname": " ",
+      "teamName": "YIKES",
+      "country": " "
+    },
+    {
+      "kills": 0,
+      "tournamentsPlayed": 26,
+      "nickname": " ",
+      "teamName": "TT TEAM",
+      "country": " "
     }
   ],
   "slug": "pubg-mobile-teams",
