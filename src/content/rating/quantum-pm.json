@@ -2,39 +2,11 @@
   "discipline": "QUANTUM PM",
   "players": [
     {
-      "kills": 0,
-      "tournamentsPlayed": 210,
-      "nickname": "-",
-      "teamName": "MAJOR PRIDE",
-      "country": "RU"
-    },
-    {
-      "kills": 0,
-      "tournamentsPlayed": 203,
-      "teamName": "CYBERHERO",
-      "nickname": "-",
-      "country": "RU"
-    },
-    {
-      "kills": 0,
-      "tournamentsPlayed": 202,
-      "teamName": "ARCRED",
-      "nickname": "-",
-      "country": "RU"
-    },
-    {
-      "kills": 0,
-      "tournamentsPlayed": 203,
-      "teamName": "AFTER LIFE",
-      "nickname": "AFTER LIFE",
-      "country": "RU"
-    },
-    {
-      "kills": 0,
-      "tournamentsPlayed": 201,
-      "nickname": "A LOW BLOW",
-      "teamName": "A LOW BLOW",
-      "country": "RU"
+      "kills": 100500,
+      "tournamentsPlayed": 327873,
+      "teamName": "VINCERE MORTEM",
+      "country": "DE",
+      "nickname": "-"
     }
   ],
   "slug": "quantum-pm",
